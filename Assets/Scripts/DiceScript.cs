@@ -152,7 +152,11 @@ public class DiceScript : MonoBehaviour
             greenDie--;
             int randomNum = Random.Range(1, diceNumberOfSides+1);
 
-            if (randomNum == 2)
+            if (randomNum == 1)
+            {
+
+            }
+            else if (randomNum == 2)
             {
                 advantage = advantage + 2;
             }
@@ -191,7 +195,11 @@ public class DiceScript : MonoBehaviour
             yellowDie--;
             int randomNum = Random.Range(1, diceNumberOfSides+1);
 
-            if (randomNum == 2)
+            if (randomNum == 1)
+            {
+                
+            }
+            else if (randomNum == 2)
             {
                 success = success + 2;
             }
@@ -248,7 +256,11 @@ public class DiceScript : MonoBehaviour
             redDie--;
             int randomNum = Random.Range(1, diceNumberOfSides+1);
 
-            if (randomNum == 2)
+            if (randomNum == 1)
+            {
+                
+            }
+            else if (randomNum == 2)
             {
                 failure = failure + 2;
             }
@@ -316,6 +328,10 @@ public class DiceScript : MonoBehaviour
             {
                 threat = threat + 2;
             }
+            else if (randomNum == 4)
+            {
+                
+            }
             else if (randomNum == 5)
             {
                 threat = threat + 1;
@@ -359,6 +375,14 @@ public class DiceScript : MonoBehaviour
             {
                 threat = threat + 1;
             }
+            else if (randomNum == 5)
+            {
+                
+            }
+            else if (randomNum == 6)
+            {
+                
+            }
         }
     }
 
@@ -369,9 +393,17 @@ public class DiceScript : MonoBehaviour
             blueDie--;
             int randomNum = Random.Range(1, diceNumberOfSides+1);
 
-            if (randomNum == 2)
+            if (randomNum == 1)
+            {
+                
+            }
+            else if (randomNum == 2)
             {
                 success = success + 1;
+            }
+            else if (randomNum == 3)
+            {
+                
             }
             else if (randomNum == 4)
             {
