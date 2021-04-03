@@ -8,7 +8,39 @@ public class SkillsScript : MonoBehaviour
     public static GameManager gm;
     public static DiceScript ds;
 
-    public int astrogation, athletics, charm, coercion, computers, cool, coordination, deception, discipline, leadership, mechanics, medicine, negotiation, perception, pilotingPlanetary, pilotingSpace, resilience, skullduggery, stealth, streetwise, survival, vigilance, brawl, gunnery, melee, rangedLight, rangedHeavy, coreWorlds, education, lore, outerRim, underworld, xenology;
+    public int astrogation;
+    public int athletics;
+    public int charm; 
+    public int coercion;
+    public int computers;
+    public int cool;
+    public int coordination;
+    public int deception;
+    public int discipline;
+    public int leadership;
+    public int mechanics;
+    public int medicine;
+    public int negotiation;
+    public int perception;
+    public int pilotingPlanetary;
+    public int pilotingSpace;
+    public int resilience;
+    public int skullduggery;
+    public int stealth;
+    public int streetwise;
+    public int survival;
+    public int vigilance;
+    public int brawl;
+    public int gunnery;
+    public int melee;
+    public int rangedLight;
+    public int rangedHeavy;
+    public int coreWorlds;
+    public int education;
+    public int lore;
+    public int outerRim;
+    public int underworld;
+    public int xenology;
 
     [SerializeField] GameObject astrogationButton, athleticsButton, charmButton, coercionButton, computersButton, coolButton, coordinationButton, deceptionButton, disciplineButton, leadershipButton, mechanicsButton, medicineButton, negotiationButton, perceptionButton, pilotingPlanetaryButton, pilotingSpaceButton, resilienceButton, skullduggeryButton, stealthButton, streetwiseButton, survivalButton, vigilanceButton, brawlButton, gunneryButton, meleeButton, rangedLightButton, rangedHeavyButton, coreWorldsButton, educationButton, loreButton, outerRimButton, underworldButton, xenologyButton;
 

@@ -886,10 +886,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2708,10 +2708,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2945,10 +2945,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -3143,10 +3143,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -4425,8 +4425,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -187, y: 359}
-  m_SizeDelta: {x: 90, y: 30}
+  m_AnchoredPosition: {x: -186, y: 356}
+  m_SizeDelta: {x: 130, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &370835432
 MonoBehaviour:
@@ -4549,10 +4549,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1478893399}
-  - {fileID: 1638086781}
-  - {fileID: 405822336}
   - {fileID: 628879395}
+  - {fileID: 405822336}
+  - {fileID: 1638086781}
+  - {fileID: 1478893399}
   m_Father: {fileID: 1423300796}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4905,7 +4905,7 @@ RectTransform:
   - {fileID: 1405426067}
   - {fileID: 2104695183}
   m_Father: {fileID: 383315148}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -6363,8 +6363,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -490, y: 359}
-  m_SizeDelta: {x: 90, y: 30}
+  m_AnchoredPosition: {x: -476, y: 356}
+  m_SizeDelta: {x: 130, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &529185493
 MonoBehaviour:
@@ -6654,8 +6654,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -332, y: 359}
-  m_SizeDelta: {x: 90, y: 30}
+  m_AnchoredPosition: {x: -331, y: 356}
+  m_SizeDelta: {x: 130, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &547344525
 MonoBehaviour:
@@ -7586,7 +7586,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 383315148}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -8656,8 +8656,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -25, y: 359}
-  m_SizeDelta: {x: 90, y: 30}
+  m_AnchoredPosition: {x: -41, y: 356}
+  m_SizeDelta: {x: 130, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &728236879
 MonoBehaviour:
@@ -8786,6 +8786,36 @@ MonoBehaviour:
   upgradeGroup: {fileID: 1671828304}
   skillsGroup: {fileID: 618036579}
   upgradePhase: 0
+  characterNameText: {fileID: 598182541}
+  speciesNameText: {fileID: 166983828}
+  careerText: {fileID: 591651682}
+  specializationText: {fileID: 1914568226}
+  incumberenceText: {fileID: 989262930}
+  maxIncumberenceText: {fileID: 2107294630}
+  soakText: {fileID: 51628376}
+  woundsText: {fileID: 1786128425}
+  maxWoundsText: {fileID: 1366295383}
+  strainText: {fileID: 405822337}
+  maxStrainText: {fileID: 1478893400}
+  rangedDefenseText: {fileID: 746446109}
+  meleeDefenseText: {fileID: 1614004071}
+  creditsHandText: {fileID: 744723539}
+  creditsBankText: {fileID: 1897926883}
+  characterName: 
+  speciesName: 
+  career: 
+  specialization: 
+  incumberence: 
+  maxIncumberence: 
+  soak: 
+  wounds: 
+  maxWounds: 
+  strain: 
+  maxStrain: 
+  rangedDefense: 
+  meleeDefense: 
+  creditsHand: 
+  creditsBank: 
   brawnValue: 3
   agilityValue: 3
   intellectValue: 2
@@ -12094,8 +12124,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 139, y: 359}
-  m_SizeDelta: {x: 90, y: 30}
+  m_AnchoredPosition: {x: 104, y: 356}
+  m_SizeDelta: {x: 130, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &953528921
 MonoBehaviour:
@@ -19349,7 +19379,7 @@ RectTransform:
   - {fileID: 151959306}
   - {fileID: 972341013}
   m_Father: {fileID: 383315148}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -19925,10 +19955,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -20586,10 +20616,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -21364,7 +21394,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 383315148}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -21799,7 +21829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1671828305
 Transform:
   m_ObjectHideFlags: 0
@@ -27140,8 +27170,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -635, y: 359}
-  m_SizeDelta: {x: 90, y: 30}
+  m_AnchoredPosition: {x: -621, y: 356}
+  m_SizeDelta: {x: 130, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2085254458
 MonoBehaviour:

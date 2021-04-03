@@ -497,6 +497,7 @@ public class UpgradeScript : MonoBehaviour
         valueToAdd = 0;
         upgradeUI.SetActive(false);
         ss.UpgradePhaseCompleted();
+        gm.SaveGame();
     }
 
     public void PressingAddButton()
