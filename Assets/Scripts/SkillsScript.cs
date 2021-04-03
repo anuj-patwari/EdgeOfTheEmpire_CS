@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class SkillsScript : MonoBehaviour
 {
     public static GameManager gm;
+    public static DiceScript ds;
 
     public int astrogation, athletics, charm, coercion, computers, cool, coordination, deception, discipline, leadership, mechanics, medicine, negotiation, perception, pilotingPlanetary, pilotingSpace, resilience, skullduggery, stealth, streetwise, survival, vigilance, brawl, gunnery, melee, rangedLight, rangedHeavy, coreWorlds, education, lore, outerRim, underworld, xenology;
-    public int yellowDie, greenDie;
 
     [SerializeField] GameObject astrogationButton, athleticsButton, charmButton, coercionButton, computersButton, coolButton, coordinationButton, deceptionButton, disciplineButton, leadershipButton, mechanicsButton, medicineButton, negotiationButton, perceptionButton, pilotingPlanetaryButton, pilotingSpaceButton, resilienceButton, skullduggeryButton, stealthButton, streetwiseButton, survivalButton, vigilanceButton, brawlButton, gunneryButton, meleeButton, rangedLightButton, rangedHeavyButton, coreWorldsButton, educationButton, loreButton, outerRimButton, underworldButton, xenologyButton;
 
@@ -16,6 +16,7 @@ public class SkillsScript : MonoBehaviour
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
+        ds = FindObjectOfType<DiceScript>();
         
         astrogationButton.transform.GetChild(0).GetComponent<Text>().text = "Astrogation (Intellect): " + astrogation;
         athleticsButton.transform.GetChild(0).GetComponent<Text>().text = "Athletics (Brawn): " + athletics;
@@ -65,433 +66,432 @@ public class SkillsScript : MonoBehaviour
         {
             if (astrogation <= gm.intellectValue)
             {
-                greenDie = gm.intellectValue - astrogation;
-                yellowDie = astrogation;
+                ds.greenDie = gm.intellectValue - astrogation;
+                ds.yellowDie = astrogation;
             }
             else if (astrogation > gm.intellectValue)
             {
-                greenDie = astrogation - gm.intellectValue;
-                yellowDie = gm.intellectValue;
+                ds.greenDie = astrogation - gm.intellectValue;
+                ds.yellowDie = gm.intellectValue;
             }
         }
         else if (skillName == "Athletics")
         {
             if (athletics <= gm.brawnValue)
             {
-                greenDie = gm.brawnValue - athletics;
-                yellowDie = athletics;
+                ds.greenDie = gm.brawnValue - athletics;
+                ds.yellowDie = athletics;
             }
             else if (athletics > gm.brawnValue)
             {
-                greenDie = athletics - gm.brawnValue;
-                yellowDie = gm.brawnValue;
+                ds.greenDie = athletics - gm.brawnValue;
+                ds.yellowDie = gm.brawnValue;
             }
         }
         else if (skillName == "Charm")
         {
             if (charm <= gm.presenceValue)
             {
-                greenDie = gm.presenceValue - charm;
-                yellowDie = charm;
+                ds.greenDie = gm.presenceValue - charm;
+                ds.yellowDie = charm;
             }
             else if (charm > gm.presenceValue)
             {
-                greenDie = charm - gm.presenceValue;
-                yellowDie = gm.presenceValue;
+                ds.greenDie = charm - gm.presenceValue;
+                ds.yellowDie = gm.presenceValue;
             }
         }
         else if (skillName == "Coercion")
         {
             if (coercion <= gm.willpowerValue)
             {
-                greenDie = gm.willpowerValue - coercion;
-                yellowDie = coercion;
+                ds.greenDie = gm.willpowerValue - coercion;
+                ds.yellowDie = coercion;
             }
             else if (coercion > gm.willpowerValue)
             {
-                greenDie = coercion - gm.willpowerValue;
-                yellowDie = gm.willpowerValue;
+                ds.greenDie = coercion - gm.willpowerValue;
+                ds.yellowDie = gm.willpowerValue;
             }
         }
         else if (skillName == "Computers")
         {
             if (computers <= gm.intellectValue)
             {
-                greenDie = gm.intellectValue - computers;
-                yellowDie = computers;
+                ds.greenDie = gm.intellectValue - computers;
+                ds.yellowDie = computers;
             }
             else if (computers > gm.intellectValue)
             {
-                greenDie = computers - gm.intellectValue;
-                yellowDie = gm.intellectValue;
+                ds.greenDie = computers - gm.intellectValue;
+                ds.yellowDie = gm.intellectValue;
             }
         }
         else if (skillName == "Cool")
         {
             if (cool <= gm.presenceValue)
             {
-                greenDie = gm.presenceValue - cool;
-                yellowDie = cool;
+                ds.greenDie = gm.presenceValue - cool;
+                ds.yellowDie = cool;
             }
             else if (cool > gm.presenceValue)
             {
-                greenDie = cool - gm.presenceValue;
-                yellowDie = gm.presenceValue;
+                ds.greenDie = cool - gm.presenceValue;
+                ds.yellowDie = gm.presenceValue;
             }
         }
         else if (skillName == "Coordination")
         {
             if (coordination <= gm.agilityValue)
             {
-                greenDie = gm.agilityValue - coordination;
-                yellowDie = coordination;
+                ds.greenDie = gm.agilityValue - coordination;
+                ds.yellowDie = coordination;
             }
             else if (coordination > gm.agilityValue)
             {
-                greenDie = coordination - gm.agilityValue;
-                yellowDie = gm.agilityValue;
+                ds.greenDie = coordination - gm.agilityValue;
+                ds.yellowDie = gm.agilityValue;
             }
         }
         else if (skillName == "Deception")
         {
             if (deception <= gm.cunningValue)
             {
-                greenDie = gm.cunningValue - deception;
-                yellowDie = deception;
+                ds.greenDie = gm.cunningValue - deception;
+                ds.yellowDie = deception;
             }
             else if (deception > gm.cunningValue)
             {
-                greenDie = deception - gm.cunningValue;
-                yellowDie = gm.cunningValue;
+                ds.greenDie = deception - gm.cunningValue;
+                ds.yellowDie = gm.cunningValue;
             }
         }
         else if (skillName == "Discpline")
         {
             if (discipline <= gm.willpowerValue)
             {
-                greenDie = gm.willpowerValue - discipline;
-                yellowDie = discipline;
+                ds.greenDie = gm.willpowerValue - discipline;
+                ds.yellowDie = discipline;
             }
             else if (discipline > gm.willpowerValue)
             {
-                greenDie = discipline - gm.willpowerValue;
-                yellowDie = gm.willpowerValue;
+                ds.greenDie = discipline - gm.willpowerValue;
+                ds.yellowDie = gm.willpowerValue;
             }
         }
         else if (skillName == "Leadership")
         {
             if (leadership <= gm.presenceValue)
             {
-                greenDie = gm.presenceValue - leadership;
-                yellowDie = leadership;
+                ds.greenDie = gm.presenceValue - leadership;
+                ds.yellowDie = leadership;
             }
             else if (leadership > gm.presenceValue)
             {
-                greenDie = leadership - gm.presenceValue;
-                yellowDie = gm.presenceValue;
+                ds.greenDie = leadership - gm.presenceValue;
+                ds.yellowDie = gm.presenceValue;
             }
         }
         else if (skillName == "Mechanics")
         {
             if (mechanics <= gm.intellectValue)
             {
-                greenDie = gm.intellectValue - mechanics;
-                yellowDie = mechanics;
+                ds.greenDie = gm.intellectValue - mechanics;
+                ds.yellowDie = mechanics;
             }
             else if (mechanics > gm.intellectValue)
             {
-                greenDie = mechanics - gm.intellectValue;
-                yellowDie = gm.intellectValue;
+                ds.greenDie = mechanics - gm.intellectValue;
+                ds.yellowDie = gm.intellectValue;
             }
         }
         else if (skillName == "Medicine")
         {
             if (medicine <= gm.intellectValue)
             {
-                greenDie = gm.intellectValue - medicine;
-                yellowDie = medicine;
+                ds.greenDie = gm.intellectValue - medicine;
+                ds.yellowDie = medicine;
             }
             else if (medicine > gm.intellectValue)
             {
-                greenDie = medicine - gm.intellectValue;
-                yellowDie = gm.intellectValue;
+                ds.greenDie = medicine - gm.intellectValue;
+                ds.yellowDie = gm.intellectValue;
             }
         }
         else if (skillName == "Negotiation")
         {
             if (negotiation <= gm.presenceValue)
             {
-                greenDie = gm.presenceValue - negotiation;
-                yellowDie = negotiation;
+                ds.greenDie = gm.presenceValue - negotiation;
+                ds.yellowDie = negotiation;
             }
             else if (negotiation > gm.presenceValue)
             {
-                greenDie = negotiation - gm.presenceValue;
-                yellowDie = gm.presenceValue;
+                ds.greenDie = negotiation - gm.presenceValue;
+                ds.yellowDie = gm.presenceValue;
             }
         }
         else if (skillName == "Perception")
         {
             if (perception <= gm.cunningValue)
             {
-                greenDie = gm.cunningValue - perception;
-                yellowDie = perception;
+                ds.greenDie = gm.cunningValue - perception;
+                ds.yellowDie = perception;
             }
             else if (perception > gm.cunningValue)
             {
-                greenDie = perception - gm.cunningValue;
-                yellowDie = gm.cunningValue;
+                ds.greenDie = perception - gm.cunningValue;
+                ds.yellowDie = gm.cunningValue;
             }
         }
         else if (skillName == "Piloting - Planetary")
         {
             if (pilotingPlanetary <= gm.agilityValue)
             {
-                greenDie = gm.agilityValue - pilotingPlanetary;
-                yellowDie = pilotingPlanetary;
+                ds.greenDie = gm.agilityValue - pilotingPlanetary;
+                ds.yellowDie = pilotingPlanetary;
             }
             else if (pilotingPlanetary > gm.agilityValue)
             {
-                greenDie = pilotingPlanetary - gm.agilityValue;
-                yellowDie = gm.agilityValue;
+                ds.greenDie = pilotingPlanetary - gm.agilityValue;
+                ds.yellowDie = gm.agilityValue;
             }
         }
         else if (skillName == "Piloting - Space")
         {
             if (pilotingSpace <= gm.agilityValue)
             {
-                greenDie = gm.agilityValue - pilotingSpace;
-                yellowDie = pilotingSpace;
+                ds.greenDie = gm.agilityValue - pilotingSpace;
+                ds.yellowDie = pilotingSpace;
             }
             else if (pilotingSpace > gm.agilityValue)
             {
-                greenDie = pilotingSpace - gm.agilityValue;
-                yellowDie = gm.agilityValue;
+                ds.greenDie = pilotingSpace - gm.agilityValue;
+                ds.yellowDie = gm.agilityValue;
             }
         }
         else if (skillName == "Resilience")
         {
             if (resilience <= gm.brawnValue)
             {
-                greenDie = gm.brawnValue - resilience;
-                yellowDie = resilience;
+                ds.greenDie = gm.brawnValue - resilience;
+                ds.yellowDie = resilience;
             }
             else if (resilience > gm.brawnValue)
             {
-                greenDie = resilience - gm.brawnValue;
-                yellowDie = gm.brawnValue;
+                ds.greenDie = resilience - gm.brawnValue;
+                ds.yellowDie = gm.brawnValue;
             }
         }
         else if (skillName == "Skullduggery")
         {
             if (skullduggery <= gm.cunningValue)
             {
-                greenDie = gm.cunningValue - skullduggery;
-                yellowDie = skullduggery;
+                ds.greenDie = gm.cunningValue - skullduggery;
+                ds.yellowDie = skullduggery;
             }
             else if (skullduggery > gm.cunningValue)
             {
-                greenDie = skullduggery - gm.cunningValue;
-                yellowDie = gm.cunningValue;
+                ds.greenDie = skullduggery - gm.cunningValue;
+                ds.yellowDie = gm.cunningValue;
             }
         }
         else if (skillName == "Stealth")
         {
             if (stealth <= gm.agilityValue)
             {
-                greenDie = gm.agilityValue - stealth;
-                yellowDie = stealth;
+                ds.greenDie = gm.agilityValue - stealth;
+                ds.yellowDie = stealth;
             }
             else if (stealth > gm.agilityValue)
             {
-                greenDie = stealth - gm.agilityValue;
-                yellowDie = gm.agilityValue;
+                ds.greenDie = stealth - gm.agilityValue;
+                ds.yellowDie = gm.agilityValue;
             }
         }
         else if (skillName == "Streetwise")
         {
             if (streetwise <= gm.cunningValue)
             {
-                greenDie = gm.cunningValue - streetwise;
-                yellowDie = streetwise;
+                ds.greenDie = gm.cunningValue - streetwise;
+                ds.yellowDie = streetwise;
             }
             else if (streetwise > gm.cunningValue)
             {
-                greenDie = streetwise - gm.cunningValue;
-                yellowDie = gm.cunningValue;
+                ds.greenDie = streetwise - gm.cunningValue;
+                ds.yellowDie = gm.cunningValue;
             }
         }
         else if (skillName == "Survival")
         {
             if (survival <= gm.cunningValue)
             {
-                greenDie = gm.cunningValue - survival;
-                yellowDie = survival;
+                ds.greenDie = gm.cunningValue - survival;
+                ds.yellowDie = survival;
             }
             else if (survival > gm.cunningValue)
             {
-                greenDie = survival - gm.cunningValue;
-                yellowDie = gm.cunningValue;
+                ds.greenDie = survival - gm.cunningValue;
+                ds.yellowDie = gm.cunningValue;
             }
         }
         else if (skillName == "Vigilance")
         {
             if (vigilance <= gm.willpowerValue)
             {
-                greenDie = gm.willpowerValue - vigilance;
-                yellowDie = vigilance;
+                ds.greenDie = gm.willpowerValue - vigilance;
+                ds.yellowDie = vigilance;
             }
             else if (vigilance > gm.willpowerValue)
             {
-                greenDie = vigilance - gm.willpowerValue;
-                yellowDie = gm.willpowerValue;
+                ds.greenDie = vigilance - gm.willpowerValue;
+                ds.yellowDie = gm.willpowerValue;
             }
         }
         else if (skillName == "Brawl")
         {
             if (brawl <= gm.brawnValue)
             {
-                greenDie = gm.brawnValue - brawl;
-                yellowDie = brawl;
+                ds.greenDie = gm.brawnValue - brawl;
+                ds.yellowDie = brawl;
             }
             else if (brawl > gm.brawnValue)
             {
-                greenDie = brawl - gm.brawnValue;
-                yellowDie = gm.brawnValue;
+                ds.greenDie = brawl - gm.brawnValue;
+                ds.yellowDie = gm.brawnValue;
             }
         }
         else if (skillName == "Gunnery")
         {
             if (gunnery <= gm.agilityValue)
             {
-                greenDie = gm.agilityValue - gunnery;
-                yellowDie = gunnery;
+                ds.greenDie = gm.agilityValue - gunnery;
+                ds.yellowDie = gunnery;
             }
             else if (gunnery > gm.agilityValue)
             {
-                greenDie = gunnery - gm.agilityValue;
-                yellowDie = gm.agilityValue;
+                ds.greenDie = gunnery - gm.agilityValue;
+                ds.yellowDie = gm.agilityValue;
             }
         }
         else if (skillName == "Melee")
         {
             if (melee <= gm.brawnValue)
             {
-                greenDie = gm.brawnValue - melee;
-                yellowDie = melee;
+                ds.greenDie = gm.brawnValue - melee;
+                ds.yellowDie = melee;
             }
             else if (melee > gm.brawnValue)
             {
-                greenDie = melee - gm.brawnValue;
-                yellowDie = gm.brawnValue;
+                ds.greenDie = melee - gm.brawnValue;
+                ds.yellowDie = gm.brawnValue;
             }
         }
         else if (skillName == "Ranged - Light")
         {
             if (rangedLight <= gm.agilityValue)
             {
-                greenDie = gm.agilityValue - rangedLight;
-                yellowDie = rangedLight;
+                ds.greenDie = gm.agilityValue - rangedLight;
+                ds.yellowDie = rangedLight;
             }
             else if (rangedLight > gm.agilityValue)
             {
-                greenDie = rangedLight - gm.agilityValue;
-                yellowDie = gm.agilityValue;
+                ds.greenDie = rangedLight - gm.agilityValue;
+                ds.yellowDie = gm.agilityValue;
             }
         }
         else if (skillName == "Ranged - Heavy")
         {
             if (rangedHeavy <= gm.agilityValue)
             {
-                greenDie = gm.agilityValue - rangedHeavy;
-                yellowDie = rangedHeavy;
+                ds.greenDie = gm.agilityValue - rangedHeavy;
+                ds.yellowDie = rangedHeavy;
             }
             else if (rangedHeavy > gm.agilityValue)
             {
-                greenDie = rangedHeavy - gm.agilityValue;
-                yellowDie = gm.agilityValue;
+                ds.greenDie = rangedHeavy - gm.agilityValue;
+                ds.yellowDie = gm.agilityValue;
             }
         }
         else if (skillName == "Core Worlds")
         {
             if (coreWorlds <= gm.intellectValue)
             {
-                greenDie = gm.intellectValue - coreWorlds;
-                yellowDie = coreWorlds;
+                ds.greenDie = gm.intellectValue - coreWorlds;
+                ds.yellowDie = coreWorlds;
             }
             else if (coreWorlds > gm.intellectValue)
             {
-                greenDie = coreWorlds - gm.intellectValue;
-                yellowDie = gm.intellectValue;
+                ds.greenDie = coreWorlds - gm.intellectValue;
+                ds.yellowDie = gm.intellectValue;
             }
         }
         else if (skillName == "Education")
         {
             if (education <= gm.intellectValue)
             {
-                greenDie = gm.intellectValue - education;
-                yellowDie = education;
+                ds.greenDie = gm.intellectValue - education;
+                ds.yellowDie = education;
             }
             else if (education > gm.intellectValue)
             {
-                greenDie = education - gm.intellectValue;
-                yellowDie = gm.intellectValue;
+                ds.greenDie = education - gm.intellectValue;
+                ds.yellowDie = gm.intellectValue;
             }
         }
         else if (skillName == "Lore")
         {
             if (lore <= gm.intellectValue)
             {
-                greenDie = gm.intellectValue - lore;
-                yellowDie = lore;
+                ds.greenDie = gm.intellectValue - lore;
+                ds.yellowDie = lore;
             }
             else if (lore > gm.intellectValue)
             {
-                greenDie = lore - gm.intellectValue;
-                yellowDie = gm.intellectValue;
+                ds.greenDie = lore - gm.intellectValue;
+                ds.yellowDie = gm.intellectValue;
             }
         }
         else if (skillName == "Outer Rim")
         {
             if (outerRim <= gm.intellectValue)
             {
-                greenDie = gm.intellectValue - outerRim;
-                yellowDie = outerRim;
+                ds.greenDie = gm.intellectValue - outerRim;
+                ds.yellowDie = outerRim;
             }
             else if (outerRim > gm.intellectValue)
             {
-                greenDie = outerRim - gm.intellectValue;
-                yellowDie = gm.intellectValue;
+                ds.greenDie = outerRim - gm.intellectValue;
+                ds.yellowDie = gm.intellectValue;
             }
         }
         else if (skillName == "Underworld")
         {
             if (underworld <= gm.intellectValue)
             {
-                greenDie = gm.intellectValue - underworld;
-                yellowDie = underworld;
+                ds.greenDie = gm.intellectValue - underworld;
+                ds.yellowDie = underworld;
             }
             else if (underworld > gm.intellectValue)
             {
-                greenDie = underworld - gm.intellectValue;
-                yellowDie = gm.intellectValue;
+                ds.greenDie = underworld - gm.intellectValue;
+                ds.yellowDie = gm.intellectValue;
             }
         }
         else if (skillName == "Xenology")
         {
             if (xenology <= gm.intellectValue)
             {
-                greenDie = gm.intellectValue - xenology;
-                yellowDie = xenology;
+                ds.greenDie = gm.intellectValue - xenology;
+                ds.yellowDie = xenology;
             }
             else if (xenology > gm.intellectValue)
             {
-                greenDie = xenology - gm.intellectValue;
-                yellowDie = gm.intellectValue;
+                ds.greenDie = xenology - gm.intellectValue;
+                ds.yellowDie = gm.intellectValue;
             }
         }
-        print (yellowDie + " Yellow");
-        print (greenDie + " Green");
+        ds.PlayDice();
     }
 
     public void UpgradePhaseCompleted()
