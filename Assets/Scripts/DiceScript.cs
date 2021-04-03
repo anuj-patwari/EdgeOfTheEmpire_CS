@@ -65,27 +65,64 @@ public class DiceScript : MonoBehaviour
         blackDieText.text = "Black Dice: " + blackDie.ToString();
         whiteDieText.text = "White Dice: " + whiteDie.ToString();
 
-        //EndResult
+        //     EndResult
         totalSuccess = success - failure;
         totalAdvantage = advantage - threat;
 
+
+        //     Success/Failure     &     Triumph Text
         if (totalSuccess == 0 && triumph == 0)
         {
-            totalSuccessText.text = "";
-        }
-        else if (totalSuccess == 0 && triumph != 0)
-        {
-            totalSuccessText.text = triumph + " Triumph";
+            totalSuccessText.text = "0 Success, 0 Triumph";
         }
         else if (totalSuccess > 0 && triumph == 0)
         {
             totalSuccessText.text = totalSuccess + " Success";
         }
+        else if (totalSuccess < 0 && triumph == 0)
+        {
+            totalSuccessText.text = totalSuccess*-1 + " Failure";
+        }
+        else if (totalSuccess == 0 && triumph > 0)
+        {
+            totalSuccessText.text = triumph + " Triumph";
+        }
         else if (totalSuccess > 0 && triumph > 0)
         {
             totalSuccessText.text = totalSuccess + " Success, " + triumph + " Triumph";
         }
-        
+        else if (totalSuccess < 0 && triumph > 0)
+        {
+            totalSuccessText.text = totalSuccess*-1 + " Failure, " + triumph + " Triumph";
+        }
+
+
+
+        //     Advantage/Threat     &     Despair Text
+        if (despair == 0 && totalAdvantage == 0)
+        {
+            totalAdvantageText.text = "0 Advantage, 0 Despair";
+        }
+        else if (despair == 0 && totalAdvantage > 0)
+        {
+            totalAdvantageText.text = totalAdvantage + " Advantage";
+        }
+        else if (despair == 0 && totalAdvantage < 0)
+        {
+            totalAdvantageText.text = totalAdvantage*-1 + " Threat";
+        }
+        else if (despair > 0 && totalAdvantage == 0)
+        {
+            totalAdvantageText.text = despair + " Despair";
+        }
+        else if (despair > 0 && totalAdvantage > 0)
+        {
+            totalAdvantageText.text = totalAdvantage + " Advantage, " + despair + " Despair";
+        }
+        else if (despair > 0 && totalAdvantage < 0)
+        {
+            totalAdvantageText.text = totalAdvantage*-1 + " Threat, " + despair + " Despair";
+        }
     }
 
     public void AddDie(string dieType)
