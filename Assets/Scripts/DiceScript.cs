@@ -10,10 +10,10 @@ public class DiceScript : MonoBehaviour
     [Header("Number of Dice to be rolled:")]
     public int greenDie; public int yellowDie; public int redDie; public int purpleDie; public int blackDie; public int blueDie; public int whiteDie;
 
-    [SerializeField] Text greenDieText, yellowDieText, purpleDieText, redDieText, blueDieText, blackDieText, whiteDieText;
+    [SerializeField] Text greenDieText, yellowDieText, purpleDieText, redDieText, blueDieText, blackDieText, whiteDieText, totalSuccessText, totalAdvantageText;
     
     [Header("The Dice Outcomes:")] 
-    public int success; public int advantage; public int triumph; public int failure; public int threat; public int despair; public int lightSide; public int darkSide;
+    public int success; public int advantage; public int triumph; public int failure; public int threat; public int despair; public int totalSuccess; public int totalAdvantage; public int lightSide; public int darkSide;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +46,8 @@ public class DiceScript : MonoBehaviour
         despair = 0;
         lightSide = 0;
         darkSide = 0;
+        totalSuccess = 0;
+        totalAdvantage = 0;
 
         GreenDice(8);
         YellowDice(12);
@@ -62,6 +64,28 @@ public class DiceScript : MonoBehaviour
         blueDieText.text = "Blue Dice: " + blueDie.ToString();
         blackDieText.text = "Black Dice: " + blackDie.ToString();
         whiteDieText.text = "White Dice: " + whiteDie.ToString();
+
+        //EndResult
+        totalSuccess = success - failure;
+        totalAdvantage = advantage - threat;
+
+        if (totalSuccess == 0 && triumph == 0)
+        {
+            totalSuccessText.text = "";
+        }
+        else if (totalSuccess == 0 && triumph != 0)
+        {
+            totalSuccessText.text = triumph + " Triumph";
+        }
+        else if (totalSuccess > 0 && triumph == 0)
+        {
+            totalSuccessText.text = totalSuccess + " Success";
+        }
+        else if (totalSuccess > 0 && triumph > 0)
+        {
+            totalSuccessText.text = totalSuccess + " Success, " + triumph + " Triumph";
+        }
+        
     }
 
     public void AddDie(string dieType)
