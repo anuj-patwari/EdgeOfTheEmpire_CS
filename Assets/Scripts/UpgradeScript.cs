@@ -13,6 +13,7 @@ public class UpgradeScript : MonoBehaviour
     [SerializeField] GameObject astrogationButton, athleticsButton, charmButton, coercionButton, computersButton, coolButton, coordinationButton, deceptionButton, disciplineButton, leadershipButton, mechanicsButton, medicineButton, negotiationButton, perceptionButton, pilotingPlanetaryButton, pilotingSpaceButton, resilienceButton, skullduggeryButton, stealthButton, streetwiseButton, survivalButton, vigilanceButton, brawlButton, gunneryButton, meleeButton, rangedLightButton, rangedHeavyButton, coreWorldsButton, educationButton, loreButton, outerRimButton, underworldButton, xenologyButton;
     [SerializeField] GameObject upgradeUI;
     int valueToAdd = 0;
+    [SerializeField] Text valueToAddText;
     string characteristicType;
 
     // Start is called before the first frame update
@@ -276,6 +277,8 @@ public class UpgradeScript : MonoBehaviour
             characteristicType = pressed;
             valueToAdd = ss.xenology;
         }
+
+        valueToAddText.text = valueToAdd.ToString();
     }
 
     public void CancelledUpgrade()
@@ -502,11 +505,13 @@ public class UpgradeScript : MonoBehaviour
 
     public void PressingAddButton()
     {
-        valueToAdd = valueToAdd + 1;    
+        valueToAdd = valueToAdd + 1;  
+        valueToAddText.text = valueToAdd.ToString();
     }
 
     public void PressingSubtractButton()
     {
         valueToAdd = valueToAdd - 1;    
+        valueToAddText.text = valueToAdd.ToString();
     }
 }
