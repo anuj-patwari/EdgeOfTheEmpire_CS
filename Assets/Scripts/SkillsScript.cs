@@ -41,6 +41,17 @@ public class SkillsScript : MonoBehaviour
     public int outerRim;
     public int underworld;
     public int xenology;
+    public int customSkill1;
+    public int customSkill2;
+    public int customSkill3;
+    public int customSkill4;
+    public int customSkill5;
+    public int customSkill6;
+    public int customSkill7;
+    public int customSkill8;
+    public int customSkill9;
+    public int customSkill10;
+    public int customSkill11;
 
     [SerializeField] GameObject astrogationButton, athleticsButton, charmButton, coercionButton, computersButton, coolButton, coordinationButton, deceptionButton, disciplineButton, leadershipButton, mechanicsButton, medicineButton, negotiationButton, perceptionButton, pilotingPlanetaryButton, pilotingSpaceButton, resilienceButton, skullduggeryButton, stealthButton, streetwiseButton, survivalButton, vigilanceButton, brawlButton, gunneryButton, meleeButton, rangedLightButton, rangedHeavyButton, coreWorldsButton, educationButton, loreButton, outerRimButton, underworldButton, xenologyButton;
 
@@ -523,6 +534,14 @@ public class SkillsScript : MonoBehaviour
                 ds.yellowDie = gm.intellectValue;
             }
         }
+        /*else if (skillName == "Custom Skill 1")
+        {
+            if (customSkill1 <= )
+            {
+
+            }
+        }*/
+
         ds.PlayDice();
     }
 

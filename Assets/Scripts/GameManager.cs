@@ -59,10 +59,10 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //ReloadGame();
+        ReloadGame();
         characteristics = FindObjectOfType<Characteristics>();
         us = FindObjectOfType<UpgradeScript>();
-        upgradeGroup.SetActive(false);
+        upgradeGroup.SetActive(false);        
     }
 
     // Update is called once per frame
@@ -75,7 +75,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    void PlayerDetails()
+    public void PlayerDetails()
     {
         characterName = characterNameText.text;
         speciesName = speciesNameText.text;
@@ -115,11 +115,51 @@ public class GameManager : MonoBehaviour
 
     public void SaveGame()
     {
-        
+        SaveSystem.SaveData(this);
     }
 
     public void ReloadGame()
     {
-        
+        PlayerData data = SaveSystem.LoadData();
+
+        brawnValue = data.brawnValue;
+        agilityValue = data.agilityValue;
+        intellectValue = data.intellectValue;
+        cunningValue = data.cunningValue;
+        willpowerValue = data.willpowerValue;
+        presenceValue = data.presenceValue;
+
+        characterName = data.characterName;
+        speciesName = data.speciesName;
+        career = data.career;
+        specialization = data.specialization;
+        incumberence = data.incumberence;
+        maxIncumberence = data.maxIncumberence;
+        soak = data.soak;
+        wounds = data.wounds;
+        maxWounds = data.maxWounds;
+        strain = data.strain;
+        maxStrain = data.maxStrain;
+        rangedDefense = data.rangedDefense;
+        meleeDefense = data.meleeDefense;
+        creditsHand = data.creditsHand;
+        creditsBank = data.creditsBank;
+
+
+        characterNameText.text = characterName;
+        speciesNameText.text = speciesName;
+        careerText.text = career;
+        specializationText.text = specialization;
+        incumberenceText.text = incumberence;
+        maxIncumberenceText.text = maxIncumberence;
+        soakText.text = soak;
+        woundsText.text = wounds;
+        maxWoundsText.text = maxWounds;
+        strainText.text = strain;
+        maxStrainText.text = maxStrain;
+        rangedDefenseText.text = rangedDefense;
+        meleeDefenseText.text = meleeDefense;
+        creditsHandText.text = creditsHand;
+        creditsBankText.text = creditsBank;
     }
 }
