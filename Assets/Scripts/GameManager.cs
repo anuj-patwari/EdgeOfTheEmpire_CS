@@ -69,6 +69,11 @@ public class GameManager : MonoBehaviour
     public string[] weapon9 = new string [6];
     public string[] weapon10 = new string [6];
 
+    [Header("Custom Skills")]
+    public string[] customSkillNames = new string [11];
+    public string[] customSkillCharacteristics = new string [11];
+    public int[] customSkillValues = new int [11];
+
     // Start is called before the first frame update
     void Start()
     {
