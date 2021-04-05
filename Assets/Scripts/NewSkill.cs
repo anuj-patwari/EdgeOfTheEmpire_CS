@@ -8,11 +8,14 @@ public class NewSkill : MonoBehaviour
     public static CreateSkill cs;
     public static GameManager gm;
     public static DiceScript ds;
+    public static SkillsScript ss;
 
     public string skillName;
     public string skillChar;
     public int skillValue;
     public int skillNumber;
+
+    public GameObject upgradeButton;
 
     // Start is called before the first frame update
     void Start()
@@ -20,15 +23,19 @@ public class NewSkill : MonoBehaviour
         gm = FindObjectOfType<GameManager>();
         cs = FindObjectOfType<CreateSkill>();
         ds = FindObjectOfType<DiceScript>();
+        ss = FindObjectOfType<SkillsScript>();
 
         skillNumber = cs.skillNumber;
+        upgradeButton = cs.upgradeButton;
 
         if(cs.skillNumber == skillNumber)
         {
             skillName = gm.customSkillNames[skillNumber];
             skillChar = gm.customSkillCharacteristics[skillNumber];
             skillValue = gm.customSkillValues[skillNumber];
+            //upgradeButton.SetActive(true);
             gameObject.transform.GetChild(0).GetComponent<Text>().text = skillName + " (" + skillChar + "): " + skillValue;
+            ss.custom1Button = gameObject;
         }
     }
 

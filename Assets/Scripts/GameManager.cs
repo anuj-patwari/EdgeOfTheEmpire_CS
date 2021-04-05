@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     public static Characteristics characteristics;
     public static WeaponsScript ws;
     public static UpgradeScript us;
+    public static CreateSkill cs;
+
     public GameObject upgradeGroup;
     public GameObject skillsGroup;
     public bool upgradePhase = false;
@@ -70,6 +72,7 @@ public class GameManager : MonoBehaviour
     public string[] weapon10 = new string [6];
 
     [Header("Custom Skills")]
+    public int numberOfCreatedSkills = 0;
     public string[] customSkillNames = new string [11];
     public string[] customSkillCharacteristics = new string [11];
     public int[] customSkillValues = new int [11];
@@ -78,6 +81,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         ws = FindObjectOfType<WeaponsScript>();
+        cs = FindObjectOfType<CreateSkill>();
         ReloadGame();
         characteristics = FindObjectOfType<Characteristics>();
         us = FindObjectOfType<UpgradeScript>();
@@ -91,6 +95,15 @@ public class GameManager : MonoBehaviour
         {
             PlayerDetails();
             SaveGame();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            if (File.Exists(Application.persistentDataPath + "/savefile"))
+            {
+                File.Delete(Application.persistentDataPath + "/savefile");
+                print("Deleted!");
+            }
         }
     }
 
@@ -266,6 +279,12 @@ public class GameManager : MonoBehaviour
         ws.damage10Text.text = weapon10[2];
         ws.range10Text.text = weapon10[3];
         ws.crit10Text.text = weapon10[4];
-        ws.special10Text.text = weapon10[5];	
+        ws.special10Text.text = weapon10[5];
+
+        //     CUSTOM SKILLS
+        numberOfCreatedSkills = data.numberOfCreatedSkills;
+        customSkillNames = data.customSkillNames;
+        customSkillCharacteristics = data.customSkillCharacteristics;
+        customSkillValues = data.customSkillValues;
     }
 }

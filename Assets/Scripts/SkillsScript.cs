@@ -41,19 +41,8 @@ public class SkillsScript : MonoBehaviour
     public int outerRim;
     public int underworld;
     public int xenology;
-    public int customSkill1;
-    public int customSkill2;
-    public int customSkill3;
-    public int customSkill4;
-    public int customSkill5;
-    public int customSkill6;
-    public int customSkill7;
-    public int customSkill8;
-    public int customSkill9;
-    public int customSkill10;
-    public int customSkill11;
 
-    [SerializeField] GameObject astrogationButton, athleticsButton, charmButton, coercionButton, computersButton, coolButton, coordinationButton, deceptionButton, disciplineButton, leadershipButton, mechanicsButton, medicineButton, negotiationButton, perceptionButton, pilotingPlanetaryButton, pilotingSpaceButton, resilienceButton, skullduggeryButton, stealthButton, streetwiseButton, survivalButton, vigilanceButton, brawlButton, gunneryButton, meleeButton, rangedLightButton, rangedHeavyButton, coreWorldsButton, educationButton, loreButton, outerRimButton, underworldButton, xenologyButton;
+    public GameObject astrogationButton, athleticsButton, charmButton, coercionButton, computersButton, coolButton, coordinationButton, deceptionButton, disciplineButton, leadershipButton, mechanicsButton, medicineButton, negotiationButton, perceptionButton, pilotingPlanetaryButton, pilotingSpaceButton, resilienceButton, skullduggeryButton, stealthButton, streetwiseButton, survivalButton, vigilanceButton, brawlButton, gunneryButton, meleeButton, rangedLightButton, rangedHeavyButton, coreWorldsButton, educationButton, loreButton, outerRimButton, underworldButton, xenologyButton, custom1Button, custom2Button, custom3Button, custom4Button, custom5Button, custom6Button, custom7Button, custom8Button, custom9Button, custom10Button, custom11Button;
 
     // Start is called before the first frame update
     void Start()
@@ -94,6 +83,17 @@ public class SkillsScript : MonoBehaviour
         outerRimButton.transform.GetChild(0).GetComponent<Text>().text = "Outer Rim (Intellect): " + outerRim;
         underworldButton.transform.GetChild(0).GetComponent<Text>().text = "Underworld (Intellect): " + underworld;
         xenologyButton.transform.GetChild(0).GetComponent<Text>().text = "Xenology (Intellect): " + xenology;
+        /*custom1Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[0] + " (" + gm.customSkillCharacteristics[0] + "): " + gm.customSkillValues[0];
+        custom2Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[1] + " (" + gm.customSkillCharacteristics[1] + "): " + gm.customSkillValues[1];
+        custom3Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[2] + " (" + gm.customSkillCharacteristics[2] + "): " + gm.customSkillValues[2];
+        custom4Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[3] + " (" + gm.customSkillCharacteristics[3] + "): " + gm.customSkillValues[3];
+        custom5Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[4] + " (" + gm.customSkillCharacteristics[4] + "): " + gm.customSkillValues[4];
+        custom6Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[5] + " (" + gm.customSkillCharacteristics[5] + "): " + gm.customSkillValues[5];
+        custom7Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[6] + " (" + gm.customSkillCharacteristics[6] + "): " + gm.customSkillValues[6];
+        custom8Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[7] + " (" + gm.customSkillCharacteristics[7] + "): " + gm.customSkillValues[7];
+        custom9Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[8] + " (" + gm.customSkillCharacteristics[8] + "): " + gm.customSkillValues[8];
+        custom10Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[9] + " (" + gm.customSkillCharacteristics[9] + "): " + gm.customSkillValues[9];
+        custom11Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[10] + " (" + gm.customSkillCharacteristics[10] + "): " + gm.customSkillValues[10];*/
         
     }
 
@@ -580,5 +580,6 @@ public class SkillsScript : MonoBehaviour
         outerRimButton.transform.GetChild(0).GetComponent<Text>().text = "Outer Rim (Intellect): " + outerRim;
         underworldButton.transform.GetChild(0).GetComponent<Text>().text = "Underworld (Intellect): " + underworld;
         xenologyButton.transform.GetChild(0).GetComponent<Text>().text = "Xenology (Intellect): " + xenology;
+
     }
 }

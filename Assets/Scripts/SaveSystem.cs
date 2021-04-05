@@ -83,6 +83,13 @@ public class PlayerData
     public string[] weapon8 = new string [6];
     public string[] weapon9 = new string [6];
     public string[] weapon10 = new string [6];
+
+
+    //     CUSTOM SKILLS
+    public int numberOfCreatedSkills;
+    public string[] customSkillNames = new string [11];
+    public string[] customSkillCharacteristics = new string [11];
+    public int[] customSkillValues = new int [11];
     
     public PlayerData (GameManager gm)
     {
@@ -122,5 +129,12 @@ public class PlayerData
         weapon8 = gm.weapon8;
         weapon9 = gm.weapon9;
         weapon10 = gm.weapon10;
+
+
+        //     CUSTOM SKILLS
+        numberOfCreatedSkills = gm.numberOfCreatedSkills;
+        customSkillNames = gm.customSkillNames;
+        customSkillCharacteristics = gm.customSkillCharacteristics;
+        customSkillValues = gm.customSkillValues;
     }
 }
