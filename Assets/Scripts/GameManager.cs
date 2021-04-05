@@ -130,6 +130,7 @@ public class GameManager : MonoBehaviour
     public void SaveGame()
     {
         SaveSystem.SaveData(this);
+        print ("Game has been saved!");
     }
 
     public void ReloadGame()
@@ -194,5 +195,72 @@ public class GameManager : MonoBehaviour
         //     CHANGING TEXT BASED ON SAVE FILE
         ws.weapon1Text.text = weapon1[0];
         ws.skill1Text.text = weapon1[1];
+        ws.damage1Text.text = weapon1[2];
+        ws.range1Text.text = weapon1[3];
+        ws.crit1Text.text = weapon1[4];
+        ws.special1Text.text = weapon1[5];
+        
+        ws.weapon2Text.text = weapon2[0];
+        ws.skill2Text.text = weapon2[1];
+        ws.damage2Text.text = weapon2[2];
+        ws.range2Text.text = weapon2[3];
+        ws.crit2Text.text = weapon2[4];
+        ws.special2Text.text = weapon2[5];
+
+        ws.weapon3Text.text = weapon3[0];
+        ws.skill3Text.text = weapon3[1];
+        ws.damage3Text.text = weapon3[2];
+        ws.range3Text.text = weapon3[3];
+        ws.crit3Text.text = weapon3[4];
+        ws.special3Text.text = weapon3[5];
+
+        ws.weapon4Text.text = weapon4[0];
+        ws.skill4Text.text = weapon4[1];
+        ws.damage4Text.text = weapon4[2];
+        ws.range4Text.text = weapon4[3];
+        ws.crit4Text.text = weapon4[4];
+        ws.special4Text.text = weapon4[5];
+
+        ws.weapon5Text.text = weapon5[0];
+        ws.skill5Text.text = weapon5[1];
+        ws.damage5Text.text = weapon5[2];
+        ws.range5Text.text = weapon5[3];
+        ws.crit5Text.text = weapon5[4];
+        ws.special5Text.text = weapon5[5];
+
+        ws.weapon6Text.text = weapon6[0];
+        ws.skill6Text.text = weapon6[1];
+        ws.damage6Text.text = weapon6[2];
+        ws.range6Text.text = weapon6[3];
+        ws.crit6Text.text = weapon6[4];
+        ws.special6Text.text = weapon6[5];
+
+        ws.weapon7Text.text = weapon7[0];
+        ws.skill7Text.text = weapon7[1];
+        ws.damage7Text.text = weapon7[2];
+        ws.range7Text.text = weapon7[3];
+        ws.crit7Text.text = weapon7[4];
+        ws.special7Text.text = weapon7[5];
+
+        ws.weapon8Text.text = weapon8[0];
+        ws.skill8Text.text = weapon8[1];
+        ws.damage8Text.text = weapon8[2];
+        ws.range8Text.text = weapon8[3];
+        ws.crit8Text.text = weapon8[4];
+        ws.special8Text.text = weapon8[5];
+
+        ws.weapon9Text.text = weapon9[0];
+        ws.skill9Text.text = weapon9[1];
+        ws.damage9Text.text = weapon9[2];
+        ws.range9Text.text = weapon9[3];
+        ws.crit9Text.text = weapon9[4];
+        ws.special9Text.text = weapon9[5];	
+
+        ws.weapon10Text.text = weapon10[0];
+        ws.skill10Text.text = weapon10[1];
+        ws.damage10Text.text = weapon10[2];
+        ws.range10Text.text = weapon10[3];
+        ws.crit10Text.text = weapon10[4];
+        ws.special10Text.text = weapon10[5];	
     }
 }
