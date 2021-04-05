@@ -25176,7 +25176,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 382419215}
+      - m_Target: {fileID: 618036582}
         m_TargetAssemblyTypeName: CreateSkill, Assembly-CSharp
         m_MethodName: CancelNewSkill
         m_Mode: 1
