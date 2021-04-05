@@ -168,7 +168,7 @@ public class CreateSkill : MonoBehaviour
     int numberOfCreatedSkills = 0;
     public GameObject parentObject;
 
-    [SerializeField] GameObject newSkillButton2;
+    [SerializeField] GameObject newSkillButton;
 
     void Start()
     {
@@ -178,6 +178,7 @@ public class CreateSkill : MonoBehaviour
     public void SelectedButton(GameObject button)
     {
         selectedButton = button;
+        newSkillButton = button.GetComponent<CreateSkill>().newSkillButton;
     }
 
     public void OpenNewSkillMenu()
@@ -269,7 +270,7 @@ public class CreateSkill : MonoBehaviour
 
             if(numberOfCreatedSkills < 11)
             {
-                newSkillButton2.SetActive(true);
+                newSkillButton.SetActive(true);
             }
 
             creatingSkillPhase = false;
