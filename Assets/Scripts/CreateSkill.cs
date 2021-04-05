@@ -266,10 +266,12 @@ public class CreateSkill : MonoBehaviour
             Instantiate(skillToCreate, selectedButton.transform.position, selectedButton.transform.rotation, parentObject.transform);
             Destroy(selectedButton);
             numberOfCreatedSkills++;
+
             if(numberOfCreatedSkills < 11)
             {
                 newSkillButton2.SetActive(true);
             }
+
             creatingSkillPhase = false;
             newSkillName.text = "";
             newSkillChar.text = "";

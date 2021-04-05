@@ -21,6 +21,8 @@ public class NewSkill : MonoBehaviour
         cs = FindObjectOfType<CreateSkill>();
         ds = FindObjectOfType<DiceScript>();
 
+        skillNumber = cs.skillNumber;
+
         if(cs.skillNumber == skillNumber)
         {
             skillName = gm.customSkillNames[skillNumber];
