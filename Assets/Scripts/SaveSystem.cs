@@ -6,6 +6,7 @@ using UnityEngine;
 public static class SaveSystem
 {
     public static GameManager gm;
+    public static WeaponsScript ws;
 
     public static void SaveData(GameManager gm)
     {
@@ -70,6 +71,18 @@ public class PlayerData
     public string meleeDefense;
     public string creditsHand;
     public string creditsBank;
+
+    //     WEAPONS
+    public string[] weapon1 = new string [6];
+    public string[] weapon2 = new string [6];
+    public string[] weapon3 = new string [6];
+    public string[] weapon4 = new string [6];
+    public string[] weapon5 = new string [6];
+    public string[] weapon6 = new string [6];
+    public string[] weapon7 = new string [6];
+    public string[] weapon8 = new string [6];
+    public string[] weapon9 = new string [6];
+    public string[] weapon10 = new string [6];
     
     public PlayerData (GameManager gm)
     {
@@ -96,5 +109,18 @@ public class PlayerData
         meleeDefense = gm.meleeDefense;
         creditsHand = gm.creditsHand;
         creditsBank = gm.creditsBank;
+
+
+        //     WEAPONS
+        weapon1 = gm.weapon1;
+        weapon2 = gm.weapon2;
+        weapon3 = gm.weapon3;
+        weapon4 = gm.weapon4;
+        weapon5 = gm.weapon5;
+        weapon6 = gm.weapon6;
+        weapon7 = gm.weapon7;
+        weapon8 = gm.weapon8;
+        weapon9 = gm.weapon9;
+        weapon10 = gm.weapon10;
     }
 }

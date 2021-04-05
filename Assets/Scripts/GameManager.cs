@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public static Characteristics characteristics;
+    public static WeaponsScript ws;
     public static UpgradeScript us;
     public GameObject upgradeGroup;
     public GameObject skillsGroup;
@@ -56,9 +57,22 @@ public class GameManager : MonoBehaviour
     public int willpowerValue;
     public int presenceValue;
 
+    [Header ("Weapons")]
+    public string[] weapon1 = new string [6];
+    public string[] weapon2 = new string [6];
+    public string[] weapon3 = new string [6];
+    public string[] weapon4 = new string [6];
+    public string[] weapon5 = new string [6];
+    public string[] weapon6 = new string [6];
+    public string[] weapon7 = new string [6];
+    public string[] weapon8 = new string [6];
+    public string[] weapon9 = new string [6];
+    public string[] weapon10 = new string [6];
+
     // Start is called before the first frame update
     void Start()
     {
+        ws = FindObjectOfType<WeaponsScript>();
         ReloadGame();
         characteristics = FindObjectOfType<Characteristics>();
         us = FindObjectOfType<UpgradeScript>();
@@ -161,5 +175,24 @@ public class GameManager : MonoBehaviour
         meleeDefenseText.text = meleeDefense;
         creditsHandText.text = creditsHand;
         creditsBankText.text = creditsBank;
+
+
+
+        //     WEAPONS
+        //     RELOADING ARRAYS FROM SAVE FILE
+        weapon1 = data.weapon1;
+        weapon2 = data.weapon2;
+        weapon3 = data.weapon3;
+        weapon4 = data.weapon4;
+        weapon5 = data.weapon5;
+        weapon6 = data.weapon6;
+        weapon7 = data.weapon7;
+        weapon8 = data.weapon8;
+        weapon9 = data.weapon9;
+        weapon10 = data.weapon10;
+
+        //     CHANGING TEXT BASED ON SAVE FILE
+        ws.weapon1Text.text = weapon1[0];
+        ws.skill1Text.text = weapon1[1];
     }
 }
