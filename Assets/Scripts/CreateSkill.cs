@@ -22,6 +22,8 @@ public class CreateSkill : MonoBehaviour
 
     [SerializeField] GameObject newSkillButton;
 
+    [SerializeField] GameObject customButton1, customButton2, customButton3, customButton4, customButton5, customButton6, customButton7, customButton8, customButton9, customButton10, customButton11;
+
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
@@ -56,12 +58,20 @@ public class CreateSkill : MonoBehaviour
                 gm.customSkillNames[0] = newSkillName.text;
                 gm.customSkillCharacteristics[0] = newSkillChar.text;
                 gm.customSkillValues[0] = int.Parse(newSkillVal.text);
+                customButton1.SetActive(true);
+                customButton1.GetComponent<NewSkill>().skillName = gm.customSkillNames[skillNumber];
+                customButton1.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[skillNumber];
+                customButton1.GetComponent<NewSkill>().skillValue = gm.customSkillValues[skillNumber];
             }
             else if(skillNumber == 1)
             {
                 gm.customSkillNames[1] = newSkillName.text;
                 gm.customSkillCharacteristics[1] = newSkillChar.text;
                 gm.customSkillValues[1] = int.Parse(newSkillVal.text);
+                customButton2.SetActive(true);
+                customButton2.GetComponent<NewSkill>().skillName = gm.customSkillNames[skillNumber];
+                customButton2.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[skillNumber];
+                customButton2.GetComponent<NewSkill>().skillValue = gm.customSkillValues[skillNumber];
             }
             else if(skillNumber == 2)
             {
@@ -117,7 +127,7 @@ public class CreateSkill : MonoBehaviour
                 gm.customSkillCharacteristics[10] = newSkillChar.text;
                 gm.customSkillValues[10] = int.Parse(newSkillVal.text);
             }
-            Instantiate(skillToCreate, selectedButton.transform.position, selectedButton.transform.rotation, parentObject.transform);
+            //Instantiate(skillToCreate, selectedButton.transform.position, selectedButton.transform.rotation, parentObject.transform);
             Destroy(selectedButton);
             gm.numberOfCreatedSkills++;
             upgradeButton.SetActive(true);

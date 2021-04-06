@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public static WeaponsScript ws;
     public static UpgradeScript us;
     public static CreateSkill cs;
+    public static NewSkill ns;
+    public static SkillsScript ss;
 
     public GameObject upgradeGroup;
     public GameObject skillsGroup;
@@ -82,6 +84,8 @@ public class GameManager : MonoBehaviour
     {
         ws = FindObjectOfType<WeaponsScript>();
         cs = FindObjectOfType<CreateSkill>();
+        ns = FindObjectOfType<NewSkill>();
+        ss = FindObjectOfType<SkillsScript>();
         ReloadGame();
         characteristics = FindObjectOfType<Characteristics>();
         us = FindObjectOfType<UpgradeScript>();
@@ -139,9 +143,10 @@ public class GameManager : MonoBehaviour
         else if(upgradePhase == true)
         {
             upgradePhase = false;
-            upgradeGroup.SetActive(false);
             skillsGroup.SetActive(true);
             characteristics.SetUpgradeButtons();
+            ss.UpgradePhaseCompleted();
+            upgradeGroup.SetActive(false);
         }
     }
 
@@ -286,5 +291,96 @@ public class GameManager : MonoBehaviour
         customSkillNames = data.customSkillNames;
         customSkillCharacteristics = data.customSkillCharacteristics;
         customSkillValues = data.customSkillValues;
+
+        if(numberOfCreatedSkills >= 1)
+        {
+            ss.custom1Button.SetActive(true);
+            Destroy(ss.customCreator1);
+            ss.custom1Button.GetComponent<NewSkill>().skillName = customSkillNames[0];
+            ss.custom1Button.GetComponent<NewSkill>().skillChar = customSkillCharacteristics[0];
+            ss.custom1Button.GetComponent<NewSkill>().skillValue = customSkillValues[0];
+            ss.custom1Button.GetComponent<NewSkill>().upgradeButton.SetActive(true);
+        }
+        if(numberOfCreatedSkills >= 2)
+        {
+            ss.custom2Button.SetActive(true);
+            Destroy(ss.customCreator2);
+            ss.custom2Button.GetComponent<NewSkill>().skillName = customSkillNames[1];
+            ss.custom2Button.GetComponent<NewSkill>().skillChar = customSkillCharacteristics[1];
+            ss.custom2Button.GetComponent<NewSkill>().skillValue = customSkillValues[1];
+            ss.custom2Button.GetComponent<NewSkill>().upgradeButton.SetActive(true);
+        }
+        if(numberOfCreatedSkills >= 3)
+        {
+            ss.custom3Button.SetActive(true);
+            Destroy(ss.customCreator3);
+            ss.custom3Button.GetComponent<NewSkill>().skillName = customSkillNames[2];
+            ss.custom3Button.GetComponent<NewSkill>().skillChar = customSkillCharacteristics[2];
+            ss.custom3Button.GetComponent<NewSkill>().skillValue = customSkillValues[2];
+        }
+        if(numberOfCreatedSkills >= 4)
+        {
+            ss.custom4Button.SetActive(true);
+            Destroy(ss.customCreator4);
+            ss.custom4Button.GetComponent<NewSkill>().skillName = customSkillNames[3];
+            ss.custom4Button.GetComponent<NewSkill>().skillChar = customSkillCharacteristics[3];
+            ss.custom4Button.GetComponent<NewSkill>().skillValue = customSkillValues[3];
+        }
+        if(numberOfCreatedSkills >= 5)
+        {
+            ss.custom5Button.SetActive(true);
+            Destroy(ss.customCreator5);
+            ss.custom5Button.GetComponent<NewSkill>().skillName = customSkillNames[4];
+            ss.custom5Button.GetComponent<NewSkill>().skillChar = customSkillCharacteristics[4];
+            ss.custom5Button.GetComponent<NewSkill>().skillValue = customSkillValues[4];
+        }
+        if(numberOfCreatedSkills >= 6)
+        {
+            ss.custom6Button.SetActive(true);
+            Destroy(ss.customCreator6);
+            ss.custom6Button.GetComponent<NewSkill>().skillName = customSkillNames[5];
+            ss.custom6Button.GetComponent<NewSkill>().skillChar = customSkillCharacteristics[5];
+            ss.custom6Button.GetComponent<NewSkill>().skillValue = customSkillValues[5];
+        }
+        if(numberOfCreatedSkills >= 7)
+        {
+            ss.custom7Button.SetActive(true);
+            Destroy(ss.customCreator7);
+            ss.custom7Button.GetComponent<NewSkill>().skillName = customSkillNames[6];
+            ss.custom7Button.GetComponent<NewSkill>().skillChar = customSkillCharacteristics[6];
+            ss.custom7Button.GetComponent<NewSkill>().skillValue = customSkillValues[6];
+        }
+        if(numberOfCreatedSkills >= 8)
+        {
+            ss.custom8Button.SetActive(true);
+            Destroy(ss.customCreator8);
+            ss.custom8Button.GetComponent<NewSkill>().skillName = customSkillNames[7];
+            ss.custom8Button.GetComponent<NewSkill>().skillChar = customSkillCharacteristics[7];
+            ss.custom8Button.GetComponent<NewSkill>().skillValue = customSkillValues[7];
+        }
+        if(numberOfCreatedSkills >= 9)
+        {
+            ss.custom9Button.SetActive(true);
+            Destroy(ss.customCreator9);
+            ss.custom9Button.GetComponent<NewSkill>().skillName = customSkillNames[8];
+            ss.custom9Button.GetComponent<NewSkill>().skillChar = customSkillCharacteristics[8];
+            ss.custom9Button.GetComponent<NewSkill>().skillValue = customSkillValues[8];
+        }
+        if(numberOfCreatedSkills >= 10)
+        {
+            ss.custom10Button.SetActive(true);
+            Destroy(ss.customCreator10);
+            ss.custom10Button.GetComponent<NewSkill>().skillName = customSkillNames[9];
+            ss.custom10Button.GetComponent<NewSkill>().skillChar = customSkillCharacteristics[9];
+            ss.custom10Button.GetComponent<NewSkill>().skillValue = customSkillValues[9];
+        }
+        if(numberOfCreatedSkills >= 11)
+        {
+            ss.custom11Button.SetActive(true);
+            Destroy(ss.customCreator11);
+            ss.custom11Button.GetComponent<NewSkill>().skillName = customSkillNames[10];
+            ss.custom11Button.GetComponent<NewSkill>().skillChar = customSkillCharacteristics[10];
+            ss.custom11Button.GetComponent<NewSkill>().skillValue = customSkillValues[10];
+        }
     }
 }

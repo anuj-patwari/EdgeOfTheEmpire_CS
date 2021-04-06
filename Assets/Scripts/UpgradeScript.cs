@@ -85,6 +85,20 @@ public class UpgradeScript : MonoBehaviour
         cunningButton.transform.GetChild(0).GetComponent<Text>().text = "Cunning: " + gm.cunningValue;
         willpowerButton.transform.GetChild(0).GetComponent<Text>().text = "Willpower: " + gm.willpowerValue;
         presenceButton.transform.GetChild(0).GetComponent<Text>().text = "Presence: " + gm.presenceValue;
+
+
+
+        custom1Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[0] + " (" + gm.customSkillCharacteristics[0] + "): " + gm.customSkillValues[0];
+        custom2Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[1] + " (" + gm.customSkillCharacteristics[1] + "): " + gm.customSkillValues[1];
+        custom3Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[2] + " (" + gm.customSkillCharacteristics[2] + "): " + gm.customSkillValues[2];
+        custom4Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[3] + " (" + gm.customSkillCharacteristics[3] + "): " + gm.customSkillValues[3];
+        custom5Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[4] + " (" + gm.customSkillCharacteristics[4] + "): " + gm.customSkillValues[4];
+        custom6Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[5] + " (" + gm.customSkillCharacteristics[5] + "): " + gm.customSkillValues[5];
+        custom7Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[6] + " (" + gm.customSkillCharacteristics[6] + "): " + gm.customSkillValues[6];
+        custom8Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[7] + " (" + gm.customSkillCharacteristics[7] + "): " + gm.customSkillValues[7];
+        custom9Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[8] + " (" + gm.customSkillCharacteristics[8] + "): " + gm.customSkillValues[8];
+        custom10Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[9] + " (" + gm.customSkillCharacteristics[9] + "): " + gm.customSkillValues[9];
+        custom11Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[10] + " (" + gm.customSkillCharacteristics[10] + "): " + gm.customSkillValues[10];
     }
 
     public void EnableUpgradeUI(string pressed)
@@ -620,7 +634,7 @@ public class UpgradeScript : MonoBehaviour
 
         valueToAdd = 0;
         upgradeUI.SetActive(false);
-        ss.UpgradePhaseCompleted();
+        //ss.UpgradePhaseCompleted();
         gm.SaveGame();
     }
 

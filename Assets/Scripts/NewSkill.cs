@@ -25,10 +25,10 @@ public class NewSkill : MonoBehaviour
         ds = FindObjectOfType<DiceScript>();
         ss = FindObjectOfType<SkillsScript>();
 
-        skillNumber = cs.skillNumber;
-        upgradeButton = cs.upgradeButton;
+        //skillNumber = cs.skillNumber;
+        //upgradeButton = cs.upgradeButton;
 
-        if(cs.skillNumber == skillNumber)
+        if(skillNumber >= 0)
         {
             skillName = gm.customSkillNames[skillNumber];
             skillChar = gm.customSkillCharacteristics[skillNumber];
@@ -43,6 +43,19 @@ public class NewSkill : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void UpgradePhaseCompleted()
+    {
+        if(skillNumber >= 0)
+        {
+            skillName = gm.customSkillNames[skillNumber];
+            skillChar = gm.customSkillCharacteristics[skillNumber];
+            skillValue = gm.customSkillValues[skillNumber];
+            //upgradeButton.SetActive(true);
+            gameObject.transform.GetChild(0).GetComponent<Text>().text = skillName + " (" + skillChar + "): " + skillValue;
+            ss.custom1Button = gameObject;
+        }
     }
 
     public void ExecuteSkill()

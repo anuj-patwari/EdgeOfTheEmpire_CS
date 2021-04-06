@@ -43,12 +43,14 @@ public class SkillsScript : MonoBehaviour
     public int xenology;
 
     public GameObject astrogationButton, athleticsButton, charmButton, coercionButton, computersButton, coolButton, coordinationButton, deceptionButton, disciplineButton, leadershipButton, mechanicsButton, medicineButton, negotiationButton, perceptionButton, pilotingPlanetaryButton, pilotingSpaceButton, resilienceButton, skullduggeryButton, stealthButton, streetwiseButton, survivalButton, vigilanceButton, brawlButton, gunneryButton, meleeButton, rangedLightButton, rangedHeavyButton, coreWorldsButton, educationButton, loreButton, outerRimButton, underworldButton, xenologyButton, custom1Button, custom2Button, custom3Button, custom4Button, custom5Button, custom6Button, custom7Button, custom8Button, custom9Button, custom10Button, custom11Button;
+    public GameObject customCreator1, customCreator2, customCreator3, customCreator4, customCreator5, customCreator6, customCreator7, customCreator8, customCreator9, customCreator10, customCreator11;
 
     // Start is called before the first frame update
     void Start()
     {
         gm = FindObjectOfType<GameManager>();
         ds = FindObjectOfType<DiceScript>();
+
         
         astrogationButton.transform.GetChild(0).GetComponent<Text>().text = "Astrogation (Intellect): " + astrogation;
         athleticsButton.transform.GetChild(0).GetComponent<Text>().text = "Athletics (Brawn): " + athletics;
@@ -83,7 +85,7 @@ public class SkillsScript : MonoBehaviour
         outerRimButton.transform.GetChild(0).GetComponent<Text>().text = "Outer Rim (Intellect): " + outerRim;
         underworldButton.transform.GetChild(0).GetComponent<Text>().text = "Underworld (Intellect): " + underworld;
         xenologyButton.transform.GetChild(0).GetComponent<Text>().text = "Xenology (Intellect): " + xenology;
-        /*custom1Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[0] + " (" + gm.customSkillCharacteristics[0] + "): " + gm.customSkillValues[0];
+        custom1Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[0] + " (" + gm.customSkillCharacteristics[0] + "): " + gm.customSkillValues[0];
         custom2Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[1] + " (" + gm.customSkillCharacteristics[1] + "): " + gm.customSkillValues[1];
         custom3Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[2] + " (" + gm.customSkillCharacteristics[2] + "): " + gm.customSkillValues[2];
         custom4Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[3] + " (" + gm.customSkillCharacteristics[3] + "): " + gm.customSkillValues[3];
@@ -93,7 +95,7 @@ public class SkillsScript : MonoBehaviour
         custom8Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[7] + " (" + gm.customSkillCharacteristics[7] + "): " + gm.customSkillValues[7];
         custom9Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[8] + " (" + gm.customSkillCharacteristics[8] + "): " + gm.customSkillValues[8];
         custom10Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[9] + " (" + gm.customSkillCharacteristics[9] + "): " + gm.customSkillValues[9];
-        custom11Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[10] + " (" + gm.customSkillCharacteristics[10] + "): " + gm.customSkillValues[10];*/
+        custom11Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[10] + " (" + gm.customSkillCharacteristics[10] + "): " + gm.customSkillValues[10];
         
     }
 
@@ -547,6 +549,42 @@ public class SkillsScript : MonoBehaviour
 
     public void UpgradePhaseCompleted()
     {
+        custom1Button.GetComponent<NewSkill>().skillName = gm.customSkillNames[0];
+        custom1Button.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[0];
+        custom1Button.GetComponent<NewSkill>().skillValue = gm.customSkillValues[0];
+        custom2Button.GetComponent<NewSkill>().skillName = gm.customSkillNames[1];
+        custom2Button.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[1];
+        custom2Button.GetComponent<NewSkill>().skillValue = gm.customSkillValues[1];
+        custom3Button.GetComponent<NewSkill>().skillName = gm.customSkillNames[2];
+        custom3Button.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[2];
+        custom3Button.GetComponent<NewSkill>().skillValue = gm.customSkillValues[2];
+        custom4Button.GetComponent<NewSkill>().skillName = gm.customSkillNames[3];
+        custom4Button.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[3];
+        custom4Button.GetComponent<NewSkill>().skillValue = gm.customSkillValues[3];
+        custom5Button.GetComponent<NewSkill>().skillName = gm.customSkillNames[4];
+        custom5Button.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[4];
+        custom5Button.GetComponent<NewSkill>().skillValue = gm.customSkillValues[4];
+        custom6Button.GetComponent<NewSkill>().skillName = gm.customSkillNames[5];
+        custom6Button.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[5];
+        custom6Button.GetComponent<NewSkill>().skillValue = gm.customSkillValues[5];
+        custom7Button.GetComponent<NewSkill>().skillName = gm.customSkillNames[6];
+        custom7Button.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[6];
+        custom7Button.GetComponent<NewSkill>().skillValue = gm.customSkillValues[6];
+        custom8Button.GetComponent<NewSkill>().skillName = gm.customSkillNames[7];
+        custom8Button.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[7];
+        custom8Button.GetComponent<NewSkill>().skillValue = gm.customSkillValues[7];
+        custom9Button.GetComponent<NewSkill>().skillName = gm.customSkillNames[8];
+        custom9Button.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[8];
+        custom9Button.GetComponent<NewSkill>().skillValue = gm.customSkillValues[8];
+        custom10Button.GetComponent<NewSkill>().skillName = gm.customSkillNames[9];
+        custom10Button.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[9];
+        custom10Button.GetComponent<NewSkill>().skillValue = gm.customSkillValues[9];
+        custom11Button.GetComponent<NewSkill>().skillName = gm.customSkillNames[10];
+        custom11Button.GetComponent<NewSkill>().skillChar = gm.customSkillCharacteristics[10];
+        custom11Button.GetComponent<NewSkill>().skillValue = gm.customSkillValues[10];
+
+
+
         astrogationButton.transform.GetChild(0).GetComponent<Text>().text = "Astrogation (Intellect): " + astrogation;
         athleticsButton.transform.GetChild(0).GetComponent<Text>().text = "Athletics (Brawn): " + athletics;
         charmButton.transform.GetChild(0).GetComponent<Text>().text = "Charm (Presence): " + charm;
@@ -580,6 +618,16 @@ public class SkillsScript : MonoBehaviour
         outerRimButton.transform.GetChild(0).GetComponent<Text>().text = "Outer Rim (Intellect): " + outerRim;
         underworldButton.transform.GetChild(0).GetComponent<Text>().text = "Underworld (Intellect): " + underworld;
         xenologyButton.transform.GetChild(0).GetComponent<Text>().text = "Xenology (Intellect): " + xenology;
-
+        custom1Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[0] + " (" + gm.customSkillCharacteristics[0] + "): " + gm.customSkillValues[0];
+        custom2Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[1] + " (" + gm.customSkillCharacteristics[1] + "): " + gm.customSkillValues[1];
+        custom3Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[2] + " (" + gm.customSkillCharacteristics[2] + "): " + gm.customSkillValues[2];
+        custom4Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[3] + " (" + gm.customSkillCharacteristics[3] + "): " + gm.customSkillValues[3];
+        custom5Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[4] + " (" + gm.customSkillCharacteristics[4] + "): " + gm.customSkillValues[4];
+        custom6Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[5] + " (" + gm.customSkillCharacteristics[5] + "): " + gm.customSkillValues[5];
+        custom7Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[6] + " (" + gm.customSkillCharacteristics[6] + "): " + gm.customSkillValues[6];
+        custom8Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[7] + " (" + gm.customSkillCharacteristics[7] + "): " + gm.customSkillValues[7];
+        custom9Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[8] + " (" + gm.customSkillCharacteristics[8] + "): " + gm.customSkillValues[8];
+        custom10Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[9] + " (" + gm.customSkillCharacteristics[9] + "): " + gm.customSkillValues[9];
+        custom11Button.transform.GetChild(0).GetComponent<Text>().text = gm.customSkillNames[10] + " (" + gm.customSkillCharacteristics[10] + "): " + gm.customSkillValues[10];
     }
 }
