@@ -726,12 +726,108 @@ public class UpgradeScript : MonoBehaviour
     public void PressingAddButton()
     {
         valueToAdd = valueToAdd + 1;  
-        valueToAddText.text = characteristicType + ": " + valueToAdd.ToString();
+
+        if (characteristicType != "Custom1" || characteristicType != "Custom2" || characteristicType != "Custom3" || characteristicType != "Custom4" || characteristicType != "Custom5" || characteristicType != "Custom6" || characteristicType != "Custom7" || characteristicType != "Custom8" || characteristicType != "Custom9" || characteristicType != "Custom10" || characteristicType != "Custom11")
+        {
+            valueToAddText.text = characteristicType + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom1")
+        {
+            valueToAddText.text = gm.customSkillNames[0] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom2")
+        {
+            valueToAddText.text = gm.customSkillNames[1] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom3")
+        {
+            valueToAddText.text = gm.customSkillNames[2] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom4")
+        {
+            valueToAddText.text = gm.customSkillNames[3] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom5")
+        {
+            valueToAddText.text = gm.customSkillNames[4] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom6")
+        {
+            valueToAddText.text = gm.customSkillNames[5] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom7")
+        {
+            valueToAddText.text = gm.customSkillNames[6] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom8")
+        {
+            valueToAddText.text = gm.customSkillNames[7] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom9")
+        {
+            valueToAddText.text = gm.customSkillNames[8] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom10")
+        {
+            valueToAddText.text = gm.customSkillNames[9] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom11")
+        {
+            valueToAddText.text = gm.customSkillNames[10] + ": " + valueToAdd.ToString();
+        }
     }
 
     public void PressingSubtractButton()
     {
         valueToAdd = valueToAdd - 1;    
-        valueToAddText.text = characteristicType + ": " + valueToAdd.ToString();
+        
+        if (characteristicType != "Custom1" || characteristicType != "Custom2" || characteristicType != "Custom3" || characteristicType != "Custom4" || characteristicType != "Custom5" || characteristicType != "Custom6" || characteristicType != "Custom7" || characteristicType != "Custom8" || characteristicType != "Custom9" || characteristicType != "Custom10" || characteristicType != "Custom11")
+        {
+            valueToAddText.text = characteristicType + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom1")
+        {
+            valueToAddText.text = gm.customSkillNames[0] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom2")
+        {
+            valueToAddText.text = gm.customSkillNames[1] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom3")
+        {
+            valueToAddText.text = gm.customSkillNames[2] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom4")
+        {
+            valueToAddText.text = gm.customSkillNames[3] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom5")
+        {
+            valueToAddText.text = gm.customSkillNames[4] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom6")
+        {
+            valueToAddText.text = gm.customSkillNames[5] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom7")
+        {
+            valueToAddText.text = gm.customSkillNames[6] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom8")
+        {
+            valueToAddText.text = gm.customSkillNames[7] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom9")
+        {
+            valueToAddText.text = gm.customSkillNames[8] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom10")
+        {
+            valueToAddText.text = gm.customSkillNames[9] + ": " + valueToAdd.ToString();
+        }
+        if (characteristicType == "Custom11")
+        {
+            valueToAddText.text = gm.customSkillNames[10] + ": " + valueToAdd.ToString();
+        }
     }
 }
