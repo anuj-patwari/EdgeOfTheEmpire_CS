@@ -2,6 +2,7 @@ using System.Collections;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
+using UnityEngine.UI;
 
 public static class SaveSystem
 {
@@ -55,6 +56,41 @@ public class PlayerData
     public int willpowerValue;
     public int presenceValue;
 
+    [Header ("PlayerSkills")]
+    public int astrogation;
+    public int athletics;
+    public int charm; 
+    public int coercion;
+    public int computers;
+    public int cool;
+    public int coordination;
+    public int deception;
+    public int discipline;
+    public int leadership;
+    public int mechanics;
+    public int medicine;
+    public int negotiation;
+    public int perception;
+    public int pilotingPlanetary;
+    public int pilotingSpace;
+    public int resilience;
+    public int skullduggery;
+    public int stealth;
+    public int streetwise;
+    public int survival;
+    public int vigilance;
+    public int brawl;
+    public int gunnery;
+    public int melee;
+    public int rangedLight;
+    public int rangedHeavy;
+    public int coreWorlds;
+    public int education;
+    public int lore;
+    public int outerRim;
+    public int underworld;
+    public int xenology;
+
     [Header("Skills")]
     public string characterName;
     public string speciesName;
@@ -90,15 +126,55 @@ public class PlayerData
     public string[] customSkillNames = new string [11];
     public string[] customSkillCharacteristics = new string [11];
     public int[] customSkillValues = new int [11];
+
+    public string notes;
+
     
     public PlayerData (GameManager gm)
     {
+        //     CHARACTERISTICS
         brawnValue = gm.brawnValue;
         agilityValue = gm.agilityValue;
         intellectValue = gm.intellectValue;
         cunningValue = gm.cunningValue;
         willpowerValue = gm.willpowerValue;
         presenceValue = gm.presenceValue;
+
+
+        //     SKILLS
+        astrogation = gm.astrogation;
+        athletics = gm.athletics;
+        charm = gm.charm;
+        coercion = gm.coercion;
+        computers = gm.computers;
+        cool = gm.cool;
+        coordination = gm.coordination;
+        deception = gm.deception;
+        discipline = gm.discipline;
+        leadership = gm.leadership;
+        mechanics= gm.mechanics;
+        medicine = gm.medicine;
+        negotiation = gm.negotiation;
+        perception = gm.perception;
+        pilotingPlanetary = gm.pilotingPlanetary;
+        pilotingSpace = gm.pilotingSpace;
+        resilience = gm.resilience;
+        skullduggery = gm.skullduggery;
+        stealth = gm.stealth;
+        streetwise = gm.streetwise;
+        survival = gm.survival;
+        vigilance = gm.vigilance;
+        brawl = gm.brawl;
+        gunnery = gm.gunnery;
+        melee = gm.melee;
+        rangedLight = gm.rangedLight;
+        rangedHeavy = gm.rangedHeavy;
+        coreWorlds = gm.coreWorlds;
+        education = gm.education;
+        lore = gm.lore;
+        outerRim = gm.outerRim;
+        underworld = gm.underworld;
+        xenology = gm.xenology;
 
 
         characterName = gm.characterName;
@@ -136,5 +212,7 @@ public class PlayerData
         customSkillNames = gm.customSkillNames;
         customSkillCharacteristics = gm.customSkillCharacteristics;
         customSkillValues = gm.customSkillValues;
+
+        notes = gm.notes;
     }
 }

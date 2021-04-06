@@ -15,6 +15,8 @@ public class DiceScript : MonoBehaviour
     [Header("The Dice Outcomes:")] 
     public int success; public int advantage; public int triumph; public int failure; public int threat; public int despair; public int totalSuccess; public int totalAdvantage; public int lightSide; public int darkSide;
 
+    bool whiteDiceRolled = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -70,59 +72,67 @@ public class DiceScript : MonoBehaviour
         totalAdvantage = advantage - threat;
 
 
-        //     Success/Failure     &     Triumph Text
-        if (totalSuccess == 0 && triumph == 0)
-        {
-            totalSuccessText.text = "0 Success, 0 Triumph";
-        }
-        else if (totalSuccess > 0 && triumph == 0)
-        {
-            totalSuccessText.text = totalSuccess + " Success";
-        }
-        else if (totalSuccess < 0 && triumph == 0)
-        {
-            totalSuccessText.text = totalSuccess*-1 + " Failure";
-        }
-        else if (totalSuccess == 0 && triumph > 0)
-        {
-            totalSuccessText.text = triumph + " Triumph";
-        }
-        else if (totalSuccess > 0 && triumph > 0)
-        {
-            totalSuccessText.text = totalSuccess + " Success, " + triumph + " Triumph";
-        }
-        else if (totalSuccess < 0 && triumph > 0)
-        {
-            totalSuccessText.text = totalSuccess*-1 + " Failure, " + triumph + " Triumph";
-        }
 
 
 
-        //     Advantage/Threat     &     Despair Text
-        if (despair == 0 && totalAdvantage == 0)
+        if(whiteDiceRolled == false)
         {
-            totalAdvantageText.text = "0 Advantage, 0 Despair";
+            //     Success/Failure     &     Triumph Text
+            if (totalSuccess == 0 && triumph == 0)
+            {
+                totalSuccessText.text = "0 Success, 0 Triumph";
+            }
+            else if (totalSuccess > 0 && triumph == 0)
+            {
+                totalSuccessText.text = totalSuccess + " Success";
+            }
+            else if (totalSuccess < 0 && triumph == 0)
+            {
+                totalSuccessText.text = totalSuccess*-1 + " Failure";
+            }
+            else if (totalSuccess == 0 && triumph > 0)
+            {
+                totalSuccessText.text = triumph + " Triumph";
+            }
+            else if (totalSuccess > 0 && triumph > 0)
+            {
+                totalSuccessText.text = totalSuccess + " Success, " + triumph + " Triumph";
+            }
+            else if (totalSuccess < 0 && triumph > 0)
+            {
+                totalSuccessText.text = totalSuccess*-1 + " Failure, " + triumph + " Triumph";
+            }
+
+
+
+            //     Advantage/Threat     &     Despair Text
+            if (despair == 0 && totalAdvantage == 0)
+            {
+                totalAdvantageText.text = "0 Advantage, 0 Despair";
+            }
+            else if (despair == 0 && totalAdvantage > 0)
+            {
+                totalAdvantageText.text = totalAdvantage + " Advantage";
+            }
+            else if (despair == 0 && totalAdvantage < 0)
+            {
+                totalAdvantageText.text = totalAdvantage*-1 + " Threat";
+            }
+            else if (despair > 0 && totalAdvantage == 0)
+            {
+                totalAdvantageText.text = despair + " Despair";
+            }
+            else if (despair > 0 && totalAdvantage > 0)
+            {
+                totalAdvantageText.text = totalAdvantage + " Advantage, " + despair + " Despair";
+            }
+            else if (despair > 0 && totalAdvantage < 0)
+            {
+                totalAdvantageText.text = totalAdvantage*-1 + " Threat, " + despair + " Despair";
+            }
         }
-        else if (despair == 0 && totalAdvantage > 0)
-        {
-            totalAdvantageText.text = totalAdvantage + " Advantage";
-        }
-        else if (despair == 0 && totalAdvantage < 0)
-        {
-            totalAdvantageText.text = totalAdvantage*-1 + " Threat";
-        }
-        else if (despair > 0 && totalAdvantage == 0)
-        {
-            totalAdvantageText.text = despair + " Despair";
-        }
-        else if (despair > 0 && totalAdvantage > 0)
-        {
-            totalAdvantageText.text = totalAdvantage + " Advantage, " + despair + " Despair";
-        }
-        else if (despair > 0 && totalAdvantage < 0)
-        {
-            totalAdvantageText.text = totalAdvantage*-1 + " Threat, " + despair + " Despair";
-        }
+        whiteDiceRolled = false;
+                
     }
 
     public void AddDie(string dieType)
@@ -168,31 +178,31 @@ public class DiceScript : MonoBehaviour
 
     public void SubtractDie(string dieType)
     {
-        if (dieType == "Green Die" && greenDie > 0)
+        if (dieType == "Green Die")
         {
             greenDie--;
         }
-        if (dieType == "Yellow Die" && yellowDie > 0)
+        if (dieType == "Yellow Die")
         {
             yellowDie--;
         }
-        if (dieType == "Purple Die" && purpleDie > 0)
+        if (dieType == "Purple Die")
         {
             purpleDie--;
         }
-        if (dieType == "Red Die" && redDie > 0)
+        if (dieType == "Red Die")
         {
             redDie--;
         }
-        if (dieType == "Blue Die" && blueDie > 0)
+        if (dieType == "Blue Die")
         {
             blueDie--;
         }
-        if (dieType == "Black Die" && blackDie > 0)
+        if (dieType == "Black Die")
         {
             blackDie--;
         }
-        if (dieType == "White Die" && whiteDie > 0)
+        if (dieType == "White Die")
         {
             whiteDie--;
         }
@@ -491,6 +501,7 @@ public class DiceScript : MonoBehaviour
         while (whiteDie > 0)
         {
             whiteDie--;
+            whiteDiceRolled = true;
             int randomNum = Random.Range(1, diceNumberOfSides+1);
 
             if (randomNum == 1)
@@ -541,6 +552,8 @@ public class DiceScript : MonoBehaviour
             {
                 darkSide = darkSide + 1;
             }
+            totalSuccessText.text = lightSide + " Light Side";
+            totalAdvantageText.text = darkSide + " Dark Side";
         }
     }
 }

@@ -64,78 +64,78 @@ public class NewSkill : MonoBehaviour
         {
             if(skillValue <= gm.brawnValue)
             {
-                ds.greenDie = gm.brawnValue - skillValue;
-                ds.yellowDie = skillValue;
+                ds.greenDie = ds.greenDie + gm.brawnValue - skillValue;
+                ds.yellowDie = ds.yellowDie + skillValue;
             }
             else if (skillValue > gm.brawnValue)
             {
-                ds.greenDie = skillValue - gm.brawnValue;
-                ds.yellowDie = gm.brawnValue;
+                ds.greenDie = ds.greenDie + skillValue - gm.brawnValue;
+                ds.yellowDie = ds.yellowDie + gm.brawnValue;
             }
         }
         else if (skillChar == "Agility")
         {
             if(skillValue <= gm.agilityValue)
             {
-                ds.greenDie = gm.agilityValue - skillValue;
-                ds.yellowDie = skillValue;
+                ds.greenDie = ds.greenDie + gm.agilityValue - skillValue;
+                ds.yellowDie = ds.yellowDie + skillValue;
             }
             else if (skillValue > gm.agilityValue)
             {
-                ds.greenDie = skillValue - gm.agilityValue;
-                ds.yellowDie = gm.agilityValue;
+                ds.greenDie = ds.greenDie + skillValue - gm.agilityValue;
+                ds.yellowDie = ds.yellowDie + gm.agilityValue;
             }
         }
         else if (skillChar == "Intellect")
         {
             if(skillValue <= gm.intellectValue)
             {
-                ds.greenDie = gm.intellectValue - skillValue;
-                ds.yellowDie = skillValue;
+                ds.greenDie = ds.greenDie + gm.intellectValue - skillValue;
+                ds.yellowDie = ds.yellowDie + skillValue;
             }
             else if (skillValue > gm.intellectValue)
             {
-                ds.greenDie = skillValue - gm.intellectValue;
-                ds.yellowDie = gm.intellectValue;
+                ds.greenDie = ds.greenDie + skillValue - gm.intellectValue;
+                ds.yellowDie = ds.yellowDie + gm.intellectValue;
             }
         }
         else if (skillChar == "Cunning")
         {
             if(skillValue <= gm.cunningValue)
             {
-                ds.greenDie = gm.cunningValue - skillValue;
-                ds.yellowDie = skillValue;
+                ds.greenDie = ds.greenDie + gm.cunningValue - skillValue;
+                ds.yellowDie = ds.yellowDie + skillValue;
             }
             else if (skillValue > gm.cunningValue)
             {
-                ds.greenDie = skillValue - gm.cunningValue;
-                ds.yellowDie = gm.cunningValue;
+                ds.greenDie = ds.greenDie + skillValue - gm.cunningValue;
+                ds.yellowDie = ds.yellowDie + gm.cunningValue;
             }
         }
         else if (skillChar == "Willpower")
         {
             if(skillValue <= gm.willpowerValue)
             {
-                ds.greenDie = gm.willpowerValue - skillValue;
-                ds.yellowDie = skillValue;
+                ds.greenDie = ds.greenDie + gm.willpowerValue - skillValue;
+                ds.yellowDie = ds.yellowDie + skillValue;
             }
             else if (skillValue > gm.willpowerValue)
             {
-                ds.greenDie = skillValue - gm.willpowerValue;
-                ds.yellowDie = gm.willpowerValue;
+                ds.greenDie = ds.greenDie + skillValue - gm.willpowerValue;
+                ds.yellowDie = ds.yellowDie + gm.willpowerValue;
             }
         }
         else if (skillChar == "Presence")
         {
             if(skillValue <= gm.presenceValue)
             {
-                ds.greenDie = gm.presenceValue - skillValue;
-                ds.yellowDie = skillValue;
+                ds.greenDie = ds.greenDie + gm.presenceValue - skillValue;
+                ds.yellowDie = ds.yellowDie + skillValue;
             }
             else if (skillValue > gm.presenceValue)
             {
-                ds.greenDie = skillValue - gm.presenceValue;
-                ds.yellowDie = gm.presenceValue;
+                ds.greenDie = ds.greenDie + skillValue - gm.presenceValue;
+                ds.yellowDie = ds.yellowDie + gm.presenceValue;
             }
         }
         ds.PlayDice();
