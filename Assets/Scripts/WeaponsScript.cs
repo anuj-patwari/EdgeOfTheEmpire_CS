@@ -167,7 +167,7 @@ public class WeaponsScript : MonoBehaviour
         gm.weapon9[2] = damage9Text.text;
         gm.weapon9[3] = range9Text.text;
         gm.weapon9[4] = crit9Text.text;
-        gm.weapon9[5] = special2Text.text;
+        gm.weapon9[5] = special9Text.text;
 
         gm.weapon10[0] = weapon10Text.text;
         gm.weapon10[1] = skill10Text.text;
