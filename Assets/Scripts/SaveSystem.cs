@@ -130,6 +130,42 @@ public class PlayerData
     public string notes;
     [TextArea(2,5)]public string inventory;
 
+
+    //     CAREER SKILLS
+    public bool careerSkill1;
+    public bool careerSkill2;
+    public bool careerSkill3;
+    public bool careerSkill4;
+    public bool careerSkill5;
+    public bool careerSkill6;
+    public bool careerSkill7;
+    public bool careerSkill8;
+    public bool careerSkill9;
+    public bool careerSkill10;
+    public bool careerSkill11;
+    public bool careerSkill12;
+    public bool careerSkill13;
+    public bool careerSkill14;
+    public bool careerSkill15;
+    public bool careerSkill16;
+    public bool careerSkill17;
+    public bool careerSkill18;
+    public bool careerSkill19;
+    public bool careerSkill20;
+    public bool careerSkill21;
+    public bool careerSkill22;
+    public bool careerSkill23;
+    public bool careerSkill24;
+    public bool careerSkill25;
+    public bool careerSkill26;
+    public bool careerSkill27;
+    public bool careerSkill28;
+    public bool careerSkill29;
+    public bool careerSkill30;
+    public bool careerSkill31;
+    public bool careerSkill32;
+    public bool careerSkill33;
+
     
     public PlayerData (GameManager gm)
     {
@@ -216,5 +252,41 @@ public class PlayerData
 
         notes = gm.notes;
         inventory = gm.inventory;
+
+
+        //     CAREER SKILLS
+        careerSkill1 = gm.careerSkill1;
+        careerSkill2 = gm.careerSkill2;
+        careerSkill3 = gm.careerSkill3;
+        careerSkill4 = gm.careerSkill4;
+        careerSkill5 = gm.careerSkill5;
+        careerSkill6 = gm.careerSkill6;
+        careerSkill7 = gm.careerSkill7;
+        careerSkill8 = gm.careerSkill8;
+        careerSkill9 = gm.careerSkill9;
+        careerSkill10 = gm.careerSkill10;
+        careerSkill11 = gm.careerSkill11;
+        careerSkill12 = gm.careerSkill12;
+        careerSkill13 = gm.careerSkill13;
+        careerSkill14 = gm.careerSkill14;
+        careerSkill15 = gm.careerSkill15;
+        careerSkill16 = gm.careerSkill16;
+        careerSkill17 = gm.careerSkill17;
+        careerSkill18 = gm.careerSkill18;
+        careerSkill19 = gm.careerSkill19;
+        careerSkill20 = gm.careerSkill20;
+        careerSkill21 = gm.careerSkill21;
+        careerSkill22 = gm.careerSkill22;
+        careerSkill23 = gm.careerSkill23;
+        careerSkill24 = gm.careerSkill24;
+        careerSkill25 = gm.careerSkill25;
+        careerSkill26 = gm.careerSkill26;
+        careerSkill27 = gm.careerSkill27;
+        careerSkill28 = gm.careerSkill28;
+        careerSkill29 = gm.careerSkill29;
+        careerSkill30 = gm.careerSkill30;
+        careerSkill31 = gm.careerSkill31;
+        careerSkill32 = gm.careerSkill32;
+        careerSkill33 = gm.careerSkill33;
     }
 }

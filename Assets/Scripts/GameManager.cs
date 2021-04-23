@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public static CreateSkill cs;
     public static NewSkill ns;
     public static SkillsScript ss;
+    public static CareerSkills careerSkills;
 
     public GameObject upgradeGroup;
     public GameObject skillsGroup;
@@ -122,6 +123,76 @@ public class GameManager : MonoBehaviour
     public TMP_InputField inventoryText;
     [TextArea(2,5)]public string inventory;
 
+
+    [Header("Career Skills")]
+    public Toggle toggle1;
+    public Toggle toggle2;
+    public Toggle toggle3;
+    public Toggle toggle4;
+    public Toggle toggle5;
+    public Toggle toggle6;
+    public Toggle toggle7;
+    public Toggle toggle8;
+    public Toggle toggle9;
+    public Toggle toggle10;
+    public Toggle toggle11;
+    public Toggle toggle12;
+    public Toggle toggle13;
+    public Toggle toggle14;
+    public Toggle toggle15;
+    public Toggle toggle16;
+    public Toggle toggle17;
+    public Toggle toggle18;
+    public Toggle toggle19;
+    public Toggle toggle20;
+    public Toggle toggle21;
+    public Toggle toggle22;
+    public Toggle toggle23;
+    public Toggle toggle24;
+    public Toggle toggle25;
+    public Toggle toggle26;
+    public Toggle toggle27;
+    public Toggle toggle28;
+    public Toggle toggle29;
+    public Toggle toggle30;
+    public Toggle toggle31;
+    public Toggle toggle32;
+    public Toggle toggle33;
+
+    public bool careerSkill1;
+    public bool careerSkill2;
+    public bool careerSkill3;
+    public bool careerSkill4;
+    public bool careerSkill5;
+    public bool careerSkill6;
+    public bool careerSkill7;
+    public bool careerSkill8;
+    public bool careerSkill9;
+    public bool careerSkill10;
+    public bool careerSkill11;
+    public bool careerSkill12;
+    public bool careerSkill13;
+    public bool careerSkill14;
+    public bool careerSkill15;
+    public bool careerSkill16;
+    public bool careerSkill17;
+    public bool careerSkill18;
+    public bool careerSkill19;
+    public bool careerSkill20;
+    public bool careerSkill21;
+    public bool careerSkill22;
+    public bool careerSkill23;
+    public bool careerSkill24;
+    public bool careerSkill25;
+    public bool careerSkill26;
+    public bool careerSkill27;
+    public bool careerSkill28;
+    public bool careerSkill29;
+    public bool careerSkill30;
+    public bool careerSkill31;
+    public bool careerSkill32;
+    public bool careerSkill33;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -129,6 +200,7 @@ public class GameManager : MonoBehaviour
         cs = FindObjectOfType<CreateSkill>();
         ns = FindObjectOfType<NewSkill>();
         ss = FindObjectOfType<SkillsScript>();
+        careerSkills = FindObjectOfType<CareerSkills>();
         ReloadGame();
         characteristics = FindObjectOfType<Characteristics>();
         us = FindObjectOfType<UpgradeScript>();
@@ -164,6 +236,7 @@ public class GameManager : MonoBehaviour
             skillsGroup.SetActive(false);
             characteristics.SetUpgradeButtons();
             us.SetUpgradeButtons();
+            careerSkills.EnableCareerSkills();
         }
         else if(upgradePhase == true)
         {
@@ -172,6 +245,7 @@ public class GameManager : MonoBehaviour
             characteristics.SetUpgradeButtons();
             ss.UpgradePhaseCompleted();
             upgradeGroup.SetActive(false);
+            careerSkills.EnableCareerSkills();
         }
     }
 
@@ -519,6 +593,77 @@ public class GameManager : MonoBehaviour
             notesText.text = notes;
             inventory = data.inventory;
             inventoryText.text = inventory;
+
+
+            //     CAREER SKILLS
+            careerSkill1 = data.careerSkill1;
+            careerSkill2 = data.careerSkill2;
+            careerSkill3 = data.careerSkill3;
+            careerSkill4 = data.careerSkill4;
+            careerSkill5 = data.careerSkill5;
+            careerSkill6 = data.careerSkill6;
+            careerSkill7 = data.careerSkill7;
+            careerSkill8 = data.careerSkill8;
+            careerSkill9 = data.careerSkill9;
+            careerSkill10 = data.careerSkill10;
+            careerSkill11 = data.careerSkill11;
+            careerSkill12 = data.careerSkill12;
+            careerSkill13 = data.careerSkill13;
+            careerSkill14 = data.careerSkill14;
+            careerSkill15 = data.careerSkill15;
+            careerSkill16 = data.careerSkill16;
+            careerSkill17 = data.careerSkill17;
+            careerSkill18 = data.careerSkill18;
+            careerSkill19 = data.careerSkill19;
+            careerSkill20 = data.careerSkill20;
+            careerSkill21 = data.careerSkill21;
+            careerSkill22 = data.careerSkill22;
+            careerSkill23 = data.careerSkill23;
+            careerSkill24 = data.careerSkill24;
+            careerSkill25 = data.careerSkill25;
+            careerSkill26 = data.careerSkill26;
+            careerSkill27 = data.careerSkill27;
+            careerSkill28 = data.careerSkill28;
+            careerSkill29 = data.careerSkill29;
+            careerSkill30 = data.careerSkill30;
+            careerSkill31 = data.careerSkill31;
+            careerSkill32 = data.careerSkill32;
+            careerSkill33 = data.careerSkill33;
+
+
+            toggle1.GetComponent<Toggle>().isOn = careerSkill1;
+            toggle2.GetComponent<Toggle>().isOn = careerSkill2;
+            toggle3.GetComponent<Toggle>().isOn = careerSkill3;
+            toggle4.GetComponent<Toggle>().isOn = careerSkill4;
+            toggle5.GetComponent<Toggle>().isOn = careerSkill5;
+            toggle6.GetComponent<Toggle>().isOn = careerSkill6;
+            toggle7.GetComponent<Toggle>().isOn = careerSkill7;
+            toggle8.GetComponent<Toggle>().isOn = careerSkill8;
+            toggle9.GetComponent<Toggle>().isOn = careerSkill9;
+            toggle10.GetComponent<Toggle>().isOn = careerSkill10;
+            toggle11.GetComponent<Toggle>().isOn = careerSkill11;
+            toggle12.GetComponent<Toggle>().isOn = careerSkill12;
+            toggle13.GetComponent<Toggle>().isOn = careerSkill13;
+            toggle14.GetComponent<Toggle>().isOn = careerSkill14;
+            toggle15.GetComponent<Toggle>().isOn = careerSkill15;
+            toggle16.GetComponent<Toggle>().isOn = careerSkill16;
+            toggle17.GetComponent<Toggle>().isOn = careerSkill17;
+            toggle18.GetComponent<Toggle>().isOn = careerSkill18;
+            toggle19.GetComponent<Toggle>().isOn = careerSkill19;
+            toggle20.GetComponent<Toggle>().isOn = careerSkill20;
+            toggle21.GetComponent<Toggle>().isOn = careerSkill21;
+            toggle22.GetComponent<Toggle>().isOn = careerSkill22;
+            toggle23.GetComponent<Toggle>().isOn = careerSkill23;
+            toggle24.GetComponent<Toggle>().isOn = careerSkill24;
+            toggle25.GetComponent<Toggle>().isOn = careerSkill25;
+            toggle26.GetComponent<Toggle>().isOn = careerSkill26;
+            toggle27.GetComponent<Toggle>().isOn = careerSkill27;
+            toggle28.GetComponent<Toggle>().isOn = careerSkill28;
+            toggle29.GetComponent<Toggle>().isOn = careerSkill29;
+            toggle30.GetComponent<Toggle>().isOn = careerSkill30;
+            toggle31.GetComponent<Toggle>().isOn = careerSkill31;
+            toggle32.GetComponent<Toggle>().isOn = careerSkill32;
+            toggle33.GetComponent<Toggle>().isOn = careerSkill33;
         }
     }
 }
