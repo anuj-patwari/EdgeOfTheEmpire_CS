@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class WeaponsScript : MonoBehaviour
 {
@@ -16,81 +17,81 @@ public class WeaponsScript : MonoBehaviour
 
 
     [Header("Weapons")]
-    public InputField weapon1Text;
-    public InputField weapon2Text;
-    public InputField weapon3Text;
-    public InputField weapon4Text;
-    public InputField weapon5Text;
-    public InputField weapon6Text;
-    public InputField weapon7Text;
-    public InputField weapon8Text;
-    public InputField weapon9Text;
-    public InputField weapon10Text;
+    public TMP_InputField weapon1Text;
+    public TMP_InputField weapon2Text;
+    public TMP_InputField weapon3Text;
+    public TMP_InputField weapon4Text;
+    public TMP_InputField weapon5Text;
+    public TMP_InputField weapon6Text;
+    public TMP_InputField weapon7Text;
+    public TMP_InputField weapon8Text;
+    public TMP_InputField weapon9Text;
+    public TMP_InputField weapon10Text;
 
 
     [Header("Skills")]
-    public InputField skill1Text;
-    public InputField skill2Text;
-    public InputField skill3Text;
-    public InputField skill4Text;
-    public InputField skill5Text;
-    public InputField skill6Text;
-    public InputField skill7Text;
-    public InputField skill8Text;
-    public InputField skill9Text;
-    public InputField skill10Text;
+    public TMP_InputField skill1Text;
+    public TMP_InputField skill2Text;
+    public TMP_InputField skill3Text;
+    public TMP_InputField skill4Text;
+    public TMP_InputField skill5Text;
+    public TMP_InputField skill6Text;
+    public TMP_InputField skill7Text;
+    public TMP_InputField skill8Text;
+    public TMP_InputField skill9Text;
+    public TMP_InputField skill10Text;
 
 
     [Header("Damage")]
-    public InputField damage1Text;
-    public InputField damage2Text;
-    public InputField damage3Text;
-    public InputField damage4Text;
-    public InputField damage5Text;
-    public InputField damage6Text;
-    public InputField damage7Text;
-    public InputField damage8Text;
-    public InputField damage9Text;
-    public InputField damage10Text;
+    public TMP_InputField damage1Text;
+    public TMP_InputField damage2Text;
+    public TMP_InputField damage3Text;
+    public TMP_InputField damage4Text;
+    public TMP_InputField damage5Text;
+    public TMP_InputField damage6Text;
+    public TMP_InputField damage7Text;
+    public TMP_InputField damage8Text;
+    public TMP_InputField damage9Text;
+    public TMP_InputField damage10Text;
 
 
     [Header("Range")]
-    public InputField range1Text;
-    public InputField range2Text;
-    public InputField range3Text;
-    public InputField range4Text;
-    public InputField range5Text;
-    public InputField range6Text;
-    public InputField range7Text;
-    public InputField range8Text;
-    public InputField range9Text;
-    public InputField range10Text;
+    public TMP_InputField range1Text;
+    public TMP_InputField range2Text;
+    public TMP_InputField range3Text;
+    public TMP_InputField range4Text;
+    public TMP_InputField range5Text;
+    public TMP_InputField range6Text;
+    public TMP_InputField range7Text;
+    public TMP_InputField range8Text;
+    public TMP_InputField range9Text;
+    public TMP_InputField range10Text;
 
 
     [Header("Crit")]
-    public InputField crit1Text;
-    public InputField crit2Text;
-    public InputField crit3Text;
-    public InputField crit4Text;
-    public InputField crit5Text;
-    public InputField crit6Text;
-    public InputField crit7Text;
-    public InputField crit8Text;
-    public InputField crit9Text;
-    public InputField crit10Text;
+    public TMP_InputField crit1Text;
+    public TMP_InputField crit2Text;
+    public TMP_InputField crit3Text;
+    public TMP_InputField crit4Text;
+    public TMP_InputField crit5Text;
+    public TMP_InputField crit6Text;
+    public TMP_InputField crit7Text;
+    public TMP_InputField crit8Text;
+    public TMP_InputField crit9Text;
+    public TMP_InputField crit10Text;
 
 
     [Header("Special")]
-    public InputField special1Text;
-    public InputField special2Text;
-    public InputField special3Text;
-    public InputField special4Text;
-    public InputField special5Text;
-    public InputField special6Text;
-    public InputField special7Text;
-    public InputField special8Text;
-    public InputField special9Text;
-    public InputField special10Text;
+    public TMP_InputField special1Text;
+    public TMP_InputField special2Text;
+    public TMP_InputField special3Text;
+    public TMP_InputField special4Text;
+    public TMP_InputField special5Text;
+    public TMP_InputField special6Text;
+    public TMP_InputField special7Text;
+    public TMP_InputField special8Text;
+    public TMP_InputField special9Text;
+    public TMP_InputField special10Text;
 
     // Start is called before the first frame update
     void Start()

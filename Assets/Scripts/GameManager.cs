@@ -119,6 +119,8 @@ public class GameManager : MonoBehaviour
 
     public TMP_InputField notesText;
     [TextArea(2,5)]public string notes;
+    public TMP_InputField inventoryText;
+    [TextArea(2,5)]public string inventory;
 
     // Start is called before the first frame update
     void Start()
@@ -191,6 +193,7 @@ public class GameManager : MonoBehaviour
         creditsHand = creditsHandText.text;
         creditsBank = creditsBankText.text;
         notes = notesText.text;
+        inventory = inventoryText.text;
         
         SaveSystem.SaveData(this);
         
@@ -514,6 +517,8 @@ public class GameManager : MonoBehaviour
 
             notes = data.notes;
             notesText.text = notes;
+            inventory = data.inventory;
+            inventoryText.text = inventory;
         }
     }
 }

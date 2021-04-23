@@ -128,6 +128,7 @@ public class PlayerData
     public int[] customSkillValues = new int [11];
 
     public string notes;
+    [TextArea(2,5)]public string inventory;
 
     
     public PlayerData (GameManager gm)
@@ -214,5 +215,6 @@ public class PlayerData
         customSkillValues = gm.customSkillValues;
 
         notes = gm.notes;
+        inventory = gm.inventory;
     }
 }
